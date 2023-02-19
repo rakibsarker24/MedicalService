@@ -1,0 +1,234 @@
+#who-we {
+	background-color: rgb(244, 244, 244);
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+#who-we .item {
+    margin-top:50px;
+}
+#who-we .item .one span{
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    color:#3498db ;
+    font-weight: 800;
+}
+#who-we .item h2{
+    margin-top:15px;
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    color:#3498db ;
+    font-weight: 800;
+    text-align: left;
+}
+
+#who-we .item p {
+	font-size: 14px;
+	margin-top: 15px;
+	font-family: 'Comfortaa', cursive;
+	color: rgb(79, 77, 77);
+	font-weight: 500;
+	width: 91%;
+}
+#who-we .image {
+    text-align: center;
+}
+#who-we .image img{
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#who-we .down {
+    position: relative;
+    z-index: 9999;
+    width: 132%;
+    display: flex;
+    border: 1px solid rgb(208, 208, 208);
+    padding: 20px 0px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#who-we .down .one{
+    text-align: center;
+    margin: 0 20px;
+}
+#who-we .down .one:nth-child(2){
+    margin: 0 147px;
+    position: relative;
+}
+#who-we .down .one:nth-child(2)::after {
+	content: '';
+	position: absolute;
+	top: 0%;
+	left: 73%;
+	height: 100%;
+	width: 1px;
+	background-color: rgb(182, 182, 182);
+	margin: 0 85px;
+}
+#who-we .down .one:nth-child(2)::before {
+	content: '';
+	position: absolute;
+	top: 0%;
+	right: 73%;
+	height: 100%;
+	width: 1px;
+	background-color: rgb(182, 182, 182);
+	margin: 0 85px;
+}
+#who-we .down .one h2{
+    font-size: 30px;
+	font-family: 'Comfortaa', cursive;
+	color: #3498db ;
+	font-weight: 800;
+    text-align: center;
+}
+#who-we .down .one span:first-child{
+    font-size: 30px;
+    font-weight: 800;
+	font-family: 'Comfortaa', cursive;
+	color: #3498db ;
+	font-weight: 500;
+}
+#who-we .down .one span{
+    font-size: 18px;
+	font-family: 'Comfortaa', cursive;
+	color: rgb(79, 77, 77);
+	font-weight: 500;
+}
+
+
+
+@media (min-width:320px) and (max-width:575px){
+    #who-we { 
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+    #who-we .item h2 {
+        font-size: 25px;
+    }
+    #who-we .item p {
+        font-size: 13px;
+        width: 100%;
+        text-align: justify;
+    }
+    #who-we .down .one h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+    #who-we .down .one span {
+        font-size: 13px;
+    }
+    #who-we .down .one:nth-child(2) {
+        margin: 0 70px;
+    }
+    #who-we .down .one:nth-child(2) {
+        margin: 0;
+    }
+    #who-we .down .one {
+        margin: 0px -4px;
+    }
+    #who-we .down {
+        width: 100%;
+        justify-content: center;
+    }
+    #who-we .down .one:nth-child(2)::after {
+        left: 5%;
+    }
+    #who-we .down .one:nth-child(2)::before {
+        right: 5%;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    #who-we .item h2 {
+        font-size: 26px;
+    }
+    #who-we .item p {
+        width: 100%;
+        text-align: justify;
+    }
+    #who-we .down {
+        width: 100%;
+    }
+    #who-we .down .one h2 {
+        font-size: 20px;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    #who-we .down .one span {
+        font-size: 14px;
+    }
+    #who-we .down {
+        justify-content: center;
+    }
+    #who-we .down .one {
+        margin: 0 11px;
+    }
+    #who-we {
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+   
+}
+@media (min-width:768px) and (max-width:991px){
+    #who-we .item h2 {
+        width: 100%;
+    }
+    #who-we .item p {
+        width: 100%;
+        text-align: justify;
+    }
+    #who-we .down .one span {
+        font-size: 14px;
+    }
+    #who-we {
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+    #who-we .image img {
+        margin-top: 100px;
+        height: 365px;
+    }
+    #who-we .down {
+        width: 167%;
+    }
+    #who-we .down .one h2 {
+        font-size: 22px;
+        text-align: center;
+        margin:0;
+    }
+    #who-we .item h2 {
+        font-size: 29px;
+    }
+    
+}
+@media (min-width:992px) and (max-width:1199px){
+    #who-we .item p {
+        width: 100%;
+        text-align: justify;
+    }
+    #who-we .image img {
+        padding-top: 100px;
+        height: 486px;
+    }
+    #who-we .down .one h2 {
+        font-size: 25px;
+        text-align: center;
+        width:100%;
+        margin: 0;
+    }
+    #who-we .down .one span {
+        font-size: 15px;
+    }
+    
+    
+}
+@media (min-width:1200px) and (max-width:1399px){
+
+}

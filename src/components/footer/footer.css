@@ -1,0 +1,132 @@
+#footer{
+    background-color:#3498db;
+    padding: 50px 0;
+    /* margin-top: 50px; */
+    /* border-top: 1px solid rgba(52, 152, 219, 0.282); */
+}
+#footer p{
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color:#3498db;
+}
+#footer .left .logo img {
+    width: 205px;
+}
+#footer p{
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color:#ffffff !important;
+    padding-top: 10px;
+    text-align: left;
+}
+#footer .ficon span{
+    font-size: 18px;
+    color:#ffffff;
+    padding-right: 20px;
+    cursor: pointer;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+#footer .ficon span:hover{
+    color:#393939;
+}
+#footer .header h3{
+    font-size: 25px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    color:#ffffff;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+#footer ul{
+    list-style: none;
+    padding: 0;
+}
+#footer ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color:#ffffff;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+#footer ul li a:hover{
+    color:#353535;
+}
+#footer .contact .con span{
+    color:#ffffff;
+    padding-right: 10px;
+}
+#footer .contact .con label{
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color:#ffffff;
+    padding-bottom: 3px;
+}
+#footer .contact .con {
+    margin-bottom: 5px;
+}
+#footer .contact .con .loca{
+    padding-right: 7px;
+    font-size: 25px;
+}
+#footer .contact .con span{
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color:#ffffff;
+    padding-bottom: 3px;
+}
+#footer .fterbtm{
+margin-top:40px;
+text-align: center;
+}
+#footer .fterbtm p{
+    font-size: 12px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    color:#ffffff;
+    padding-bottom: 3px;
+}
+
+
+
+
+@media (min-width:320px) and (max-width:575px){
+    #footer .header h3 {
+        font-size: 21px;
+        margin-bottom: 19px;
+        margin-top: 30px;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    #footer .header h3 {
+        margin-bottom: 11px;
+        
+    }
+    
+}
+@media (min-width:768px) and (max-width:991px){
+    #footer .header h3 {
+        margin-bottom: 11px;
+        
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    
+}
+@media (min-width:1200px) and (max-width:1399px){
+
+}

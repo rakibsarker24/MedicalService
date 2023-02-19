@@ -1,0 +1,70 @@
+#popularPro {
+    margin-bottom: 70px;
+}
+#popularPro button{
+    width: 100%;
+}
+
+#popularPro label{
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    color:#2f2f2f;
+    padding-right: 15px;
+}
+
+#popularPro span{
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color:#727272;
+    text-decoration: line-through;
+}
+
+#popularPro .addcard h5{
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    color:#3d3d3d;
+    cursor: pointer;
+}
+#popularPro .addcard p{
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    color:#3d3d3d;
+}
+#popularPro .pcard{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+@media (min-width:320px) and (max-width:575px){
+    #popularPro button {
+        margin-left: 0 !important;
+    }
+    .h5, h5 {
+        font-size: 16px;
+    }
+    [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
+        font-size: 14px;
+    }
+    
+}
+@media (min-width:576px) and (max-width:767px){
+    .h5, h5 {
+        font-size: 16px;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .h5, h5 {
+        font-size: 16px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+
+}
+@media (min-width:1200px) and (max-width:1399px){
+
+}

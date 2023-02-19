@@ -1,0 +1,279 @@
+#addcard{
+    margin:60px 0;
+}
+#addcard .imageitem .main{
+    width: 100%;
+    border:1px solid rgba(51, 51, 51, 0.534);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+}
+#addcard .imageitem .main img{
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    cursor: pointer;
+}
+#addcard .imageitem .main img:hover{
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+}
+#addcard .imageitem .subimage .item{
+   display: inline-block;
+   border:1px solid rgba(51, 51, 51, 0.534);
+   margin-top: 10px;
+   margin-right: 5px;
+   border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#addcard .imageitem .subimage .item img{
+    width: 118px;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#addcard .allitems h2 {
+	color: #3498db;
+	font-size: 27px;
+	font-weight: 700;
+	font-family: 'Comfortaa', cursive;
+	margin: 0;
+}
+#addcard .allitems p {
+	color: #333;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Comfortaa', cursive;
+	margin: 0;
+}
+#addcard .allitems .price {
+    margin-top: 20px;
+}
+#addcard .allitems .price label {
+    padding-right: 20px;
+	color: #333;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Comfortaa', cursive;
+	margin: 0;
+}
+#addcard .allitems .price span {
+	color: #6b6b6b;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Comfortaa', cursive;
+	margin: 0;
+    text-decoration: line-through;
+}
+#addcard .allitems .size {
+    margin-top: 10px;
+}
+#addcard .allitems .size strong {
+	color: #333;
+	font-size: 16px;
+	font-weight: 700;
+	font-family: 'Comfortaa', cursive;
+	margin: 0;
+}
+#addcard .allitems .size label {
+	color: #bdbdbd;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Comfortaa', cursive;
+	margin-right: 10px;
+	width: 25px;
+	height: 25px;
+	background-color: #f5f5f5;
+    border: 1px solid #bdbdbd;
+	text-align: center;
+	top: 50%;
+	color: #333;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	line-height: 23px;
+    cursor: pointer;
+}
+#addcard .allitems .color {
+    margin-top: 10px;
+}
+#addcard .allitems .color strong {
+	color: #333;
+	font-size: 16px;
+	font-weight: 700;
+	font-family: 'Comfortaa', cursive;
+	margin: 0;
+}
+#addcard .allitems .color label {
+	color: #bdbdbd;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Comfortaa', cursive;
+	margin-right: 10px;
+	width: 15px;
+	height: 15px;
+	background-color: #3498db ;
+    border: 1px solid #bdbdbd;
+	text-align: center;
+	top: 50%;
+	color: white;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	line-height: 23px;
+    cursor: pointer;
+}
+#addcard .allitems .color label:nth-child(2) {
+	background-color: #666666 !important;
+}
+#addcard .allitems .color label:nth-child(3) {
+	background-color: #3498db !important;
+}
+#addcard .allitems .color label:nth-child(4) {
+	background-color: #3f9108 !important;
+}
+#addcard .allitems .add {
+	margin: 10px 0;
+	background-color: #fff;
+	border: 1px solid #bbb;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	display: inline-block;
+	padding: 0px 12px;
+}
+#addcard .allitems .add strong {
+	color: #616161;
+	font-size: 22px;
+	font-weight: 700;
+	font-family: 'Comfortaa', cursive;
+	padding: 0 4px;
+	cursor: pointer;
+}
+#addcard .allitems .add span {
+	color: #616161;
+	font-size: 22px;
+	font-weight: 400;
+	font-family: 'Comfortaa', cursive;
+	padding-left: 0 15px;
+}
+#addcard .cbtn {
+    margin-top: 5px;
+}
+#addcard .cbtn button{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Comfortaa', cursive;
+    padding: 5px 15px;
+    border:1px solid #3498db ;
+    background-color: #3498db ;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+#addcard .cbtn button:hover{
+    border:1px solid #3498db ;
+    background-color: #fff;
+    border: 1px solid #3498db ;
+    color: #3498db ;
+}
+#addcard .delivery h2{
+    font-size: 22px;
+    color: #3498db ;
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
+}
+#addcard .delivery .indhaka{
+    margin-top: 20px;
+}
+#addcard .delivery .indhaka label{
+    font-size: 14px;
+    color: #333;
+    display: block;
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
+}
+#addcard .delivery .indhaka span{
+    font-size: 14px;
+    color: #333;
+    display: block;
+    font-weight: 400;
+    padding-left:20px;
+    font-family: 'Comfortaa', cursive;
+}
+#addcard .delivery .outdhaka{
+    margin-top: 20px;
+}
+#addcard .delivery .outdhaka label{
+    font-size: 14px;
+    color: #333;
+    display: block;
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
+}
+#addcard .delivery .outdhaka span{
+    font-size: 14px;
+    color: #333;
+    display: block;
+    font-weight: 400;
+    padding-left:20px;
+    font-family: 'Comfortaa', cursive;
+}
+#addcard .delivery p{
+    color: #333;
+    display: block;
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
+    color: #3498db ;
+    font-size: 22px;
+}
+#addcard .delivery .list ul li{
+    color: #333;
+    display: block;
+    font-weight: 400;
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
+}
+#addcard .marcent p{
+    display: block;
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
+    color: #3498db ;
+    font-size: 22px;
+}
+#addcard .marcent span{
+    color: #333;
+    font-weight: 400;
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
+    padding-right: 5px;
+}

@@ -1,0 +1,300 @@
+
+#navber{
+  overflow-x: hidden;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  overflow-y: hidden;
+  z-index: 9999999;
+}
+#navber .brandlogo{
+  width: 20%;
+}
+#navber .dropbtn{
+  position: relative;
+}
+#navber .menu{
+	background: #3498db !important;
+}
+#navber .menu a {
+  text-decoration: none;
+  font-size: 16px !important;
+  color: rgb(252, 252, 252) !important;
+  font-family: 'Comfortaa', cursive;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  display: block;
+  padding: 0 8px;
+  -o-transition: .4s;
+}
+#navber .menu .logo img{
+  width: 100%;
+  cursor: pointer;
+}
+#navber .menu a:hover{
+  color: rgb(49, 49, 49) !important;
+}
+#navber .dropdown-menu {
+	--bs-dropdown-bg: #3498db !important;
+}
+#navber .center {
+	width: 97%;
+}
+.dropdown-divider {
+	height: 0;
+	margin: 0 0 !important;
+	overflow: hidden;
+	border-top: 1px solid var(--bs-dropdown-divider-bg);
+	opacity: -1.9 !important;
+}
+.navIcons {
+	width: 10%;
+	display: flex;
+	justify-content: right;
+}
+.nicon{
+  font-size: 20px;
+}
+
+.navIcons span{
+  font-size: 20px;
+  color:white;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.navIcons span:hover{
+  color:rgb(49, 49, 49);
+}
+
+
+@media (min-width:320px) and (max-width:575px){
+  #navber .brandlogo {
+    width: 49%;
+  }
+  #navber .menu a {
+    font-size: 15px !important;
+    text-align: center;
+  }
+  #navber .menu a:last-child {
+    margin-bottom: 0 !important;
+    text-align: center;
+  }
+  #navber .logo img {
+    width: 100%;
+    padding: 0;
+  }
+  .navbar-toggler {
+    padding: 0 !important;
+    font-size: 20px !important;
+  }
+  button, input, optgroup, select, textarea {
+    margin: 0 25px !important;
+  }
+  .logo img {
+    width: 100%;
+    padding-left: 20px;
+  }
+  .navIcons {
+    width: 100%;
+    justify-content: center;
+  }
+  .navIcons span {
+    padding: 0 10px;
+  }
+  .dmenu{
+    margin: 0 !important;
+  }
+  .brandlogo {
+    width: 49%;
+  }
+ 
+}
+@media (min-width:576px) and (max-width:767px){
+  #navber .menu .logo img {
+    width: 152%;
+    padding: 0;
+  }
+  [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
+    margin-right: 20px !important;
+  }
+  .menu img {
+    width: 100%;
+    padding-left: 15px;
+  }
+  .navbar-toggler {
+    padding: 0 !important;
+    font-size: 20px !important;
+  }
+  .menu a {
+    font-size: 15px !important;
+    text-align: center;
+  }
+  .navIcons {
+    width: 100%;
+    justify-content: center;
+  }
+  .navIcons span {
+    padding: 0 10px;
+  }
+
+
+}
+@media (min-width:768px) and (max-width:991px){
+  #navber .menu .logo img {
+    width: 135%;
+  }
+  [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
+    margin-right: 20px;
+  }
+  .menu a {
+    font-size: 16px !important;
+    text-align: center;
+  }
+  .menu .logo img {
+    width: 53%;
+    margin-left: 20px;
+  }
+  .navIcons {
+    width: 100%;
+    justify-content: center;
+  }
+  .navIcons span {
+    padding: 0 10px;
+  }
+  .navIcons {
+    margin-right: 15px !important;
+  }
+
+}
+@media (min-width:992px) and (max-width:1199px){
+  [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
+    margin-right: 20px;
+  }
+  .menu a {
+    font-size: 16px !important;
+    text-align: center;
+  }
+  .menu .logo img {
+    width: 53%;
+    margin-left: 20px;
+    margin-left: 0;
+  }
+  .navIcons {
+    width: 100%;
+    justify-content: center;
+  }
+  .navIcons span {
+    padding: 0 10px;
+  }
+  .navIcons {
+    margin-right: 15px !important;
+  }
+  .navIcons {
+    width: 6%;
+  }
+  
+}
+@media (min-width:1200px) and (max-width:1399px){
+ 
+}
+@media (min-width:1400px) and (max-width:1599px){}
+
+
+
+
+
+
+
+#nabtop{
+  line-height: 50px;
+}
+.navtop{
+  background-color: white;
+}
+.email span{
+  font-size: 18px;
+  color: #3498db;
+  cursor: pointer;
+}
+.email label{
+  font-size: 16px;
+  font-family: 'Comfortaa', cursive;
+  color: #3498db;
+  padding-left: 5px;
+}
+.icon {
+	text-align: right;
+	padding-bottom: 5px;
+}
+.icon span{
+  font-size: 18px;
+  color: #3498db;
+  padding-left: 12px;
+  cursor: pointer;
+}
+
+
+
+@media (min-width:320px) and (max-width:575px){
+  .email {
+      text-align: center;
+  }
+  .email label {
+      font-size: 10px !important;
+  }
+  .email span {
+      font-size: 15px;
+  }
+  .icon span {
+      font-size: 15px;
+      margin-right: 8px;
+  }
+  .icon span:last-child{
+      display: none;
+  }
+}
+@media (min-width:576px) and (max-width:767px){
+  .icon span {
+      font-size: 15px;
+      margin-right: 8px;
+  }
+  .email span {
+      margin-left: 11px;
+  }
+  .email label {
+      font-size: 14px;
+      padding-left: 5px;
+  }
+  .email span {
+      font-size: 15px;
+  }
+  .icon span {
+      font-size: 15px;
+  }
+}
+@media (min-width:768px) and (max-width:991px){
+  .icon span {
+      font-size: 15px;
+      margin-right: 8px;
+  }
+  .email span {
+      margin-left: 11px;
+  }
+  .email label {
+      font-size: 16px;
+      padding-left: 5px;
+  }
+  .email span {
+      font-size: 18px;
+  }
+  .icon span {
+      font-size: 18px;
+  }
+}
+@media (min-width:992px) and (max-width:1199px){
+  
+}
+@media (min-width:1200px) and (max-width:1399px){}
+@media (min-width:1400px) and (max-width:1499px){}

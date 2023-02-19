@@ -1,0 +1,94 @@
+
+#newarticle{
+    padding-top: 100px;
+}
+#newarticle .btitle a{
+    font-size: 22px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    color:#343434;
+    padding: 0;
+}
+#newarticle .title p{
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    width: 600px;
+    color:#909090;
+    margin:0 auto;
+}
+#newarticle p{
+    font-size: 13px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color:#494949;
+    margin-bottom: 0;
+    padding-top: 7px;
+}
+#newarticle span{
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    color:#12a8d1;
+}
+#newarticle .bicon span{
+    font-size: 20px;
+    cursor: pointer;
+    color:#494949;
+}
+#newarticle a{
+    font-family: 'Comfortaa', cursive;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    color:#919191;
+    padding-left:68%;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+#newarticle a:hover{
+    color:#12a8d1;
+}
+#newarticle .bicon span:first{
+    font-family: 'Comfortaa', cursive;
+    font-size: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    color:#12a8d1;
+}
+#newarticle .bicon span:last-child{
+    text-align: right;
+    padding-left:85%;
+}
+#newarticle .bicon{
+    padding-top: 10px;
+}
+#newarticle .bicon span:hover{
+    color:#12a8d1;
+}
+
+@media (min-width:320px) and (max-width:575px){
+    #ourdoctor{
+        padding-top: 150px;
+    }
+    #ourdoctor .btitle a {
+        font-size: 20px;
+    }
+    #ourdoctor span {
+        font-size: 12px;
+    }
+    #ourdoctor a {
+        padding-left: 66%;
+    }
+    #ourdoctor .title p {
+        width: 100%;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    #ourdoctor .title p {
+        width: 100%;
+    }
+}

@@ -1,0 +1,107 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+img{
+  vertical-align: middle;
+}
+ul{
+  margin-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+ul li{
+  list-style: none;
+}
+
+
+
+/* font-family: 'Comfortaa', cursive; */
+/* #3498db */
+/* rgb(49, 49, 49) */
+
+.container{
+  max-width: 1300px !important;
+}
+.title{
+  margin-bottom:15px 0;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.title h2{
+  font-size: 40px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 800;
+  color:#3498db;
+  margin-bottom: 0;
+}
+.title p{
+  font-size: 14px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 400;
+  width: 600px;
+  color:#909090;
+  margin:0 auto;
+}
+.form-control {
+  font-family: 'Comfortaa', cursive;
+  font-size: 13.5px;
+}
+.form-label {
+  font-size: 15px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 800;
+  color:#494949;
+}
+.form-select {
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px !important;
+}
+label {
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px !important;
+}
+.form-text {
+  font-family: 'Comfortaa', cursive;
+  font-size: 12px !important;
+}
+p {
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px;
+  padding-top:10px;
+  padding: 0;
+}
+.h2, h2 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+.htcontent button:hover {
+  font-size: 15px !important;
+}
+/* [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  font-size: 15px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 800;
+  padding: 10px 15px;
+  border-radius: 25px;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.btn:hover {
+  color: #0d6efd !important;
+  background-color: #f7f7f7 !important;
+  border-color: var(--bs-btn-hover-border-color);
+} */

@@ -1,0 +1,34 @@
+#login{
+    padding-top: 160px;
+    padding-bottom: 80px;
+}
+#login .body{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(128, 128, 128, 0.416);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#login .alert-primary {
+    margin-top: 14px;
+    color:white;
+    background-color: #3498db;
+}
+#login button {
+	width: 100%;
+	color: white;
+	background-color: #3498db;
+	font-family: 'Comfortaa', cursive;
+	margin-bottom: 10px;
+	margin-left: 0 !important;
+}
+#login .form-control {
+	font-size: 13px;
+}
+#login  .red {
+    color:rgb(240, 8, 8) !important;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+}

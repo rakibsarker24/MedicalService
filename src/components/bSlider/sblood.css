@@ -1,0 +1,51 @@
+#bslider{
+    padding-top: 150px !important;
+}
+#bslider .bcontent label{
+    font-size: 27px;
+    color:#f52828;
+    font-weight: 700;
+    font-family: 'Comfortaa', 'cursive';;
+}
+#bslider .bcontent{
+    margin-top: 5%;
+}
+#bslider .bcontent p{
+    font-size: 14px;
+    color:#333;
+    font-weight: 400;
+    font-family: 'Comfortaa', 'cursive';;
+    padding: 0;
+    width: 81%;
+}
+#bslider .bcontent a{
+    font-size: 16px;
+    color:#ffffff;
+    font-weight: 400;
+    font-family: 'Comfortaa', 'cursive';
+    border-radius: 25px;
+    background-color: #f52828;
+    border: 1px solid #f52828;
+    padding: 10px 15px;
+    cursor: pointer;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+#bslider .bcontent a:hover{
+    color:#f52828;
+    background-color: white;
+    border: 1px solid #f52828;
+}
+#bslider .bimage img{
+    width: 60%;
+}
+#bslider .bimage{
+    text-align: center;
+}

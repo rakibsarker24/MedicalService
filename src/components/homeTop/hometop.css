@@ -1,0 +1,207 @@
+#hometop {
+	padding-bottom: 50px;
+	padding-top: 83px;
+}
+
+#hometop .htcontent {
+	padding-top: 120px;
+	padding-bottom: 100px;
+	background-color: #ffffff;
+}
+#hometop .htcontent h1{
+    font-size: 45px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 900;
+    color: #3498db ;
+}
+#hometop .htcontent p{
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color:rgb(86, 86, 86);
+    width:80%;
+    padding:15px 0;
+}
+#hometop .htcontent .bone{
+    text-decoration: none;
+    font-size: 16px !important;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    color:rgb(255, 255, 255);
+    border: 1px solid #3498db;
+    background-color: #3498db;
+    padding: 10px 15px !important;
+    margin-right: 50px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+#hometop .htcontent .bone:hover{
+    color:#3498db;
+    border:1px solid #3498db ;
+    background-color: white;
+}
+#hometop .htcontent .btwo{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    padding: 10px 15px;
+    color:#3498db;
+    border: 1px solid #3498db;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+#hometop .htcontent .btwo:hover{
+    color:#fdfdfd ;
+    border:1px solid #3498db ;
+    background-color: #3498db;
+}
+#hometop .image {
+    text-align: center;
+    position: relative;
+}
+#hometop .image img {
+	width: 90%;
+    padding-top:45px;
+}
+#hometop .image .e2 {
+	position: absolute;
+	top: 60%;
+	left: -48%;
+	width: 64%;
+	opacity: 0.8;
+}
+
+
+@media (min-width:320px) and (max-width:575px){
+    #hometop .htcontent {
+        padding-top: 47px;
+        padding-bottom: 100px;
+        background-color: #ffffff;
+    }
+    #hometop .htcontent h1 {
+        font-size: 25px !important;
+    }
+    #hometop .htcontent p {
+        font-size: 13px;
+        width: 100%;
+        text-align: justify;
+    }
+    [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
+        font-size: 13px;
+    }
+    #hometop .htcontent button:last-child {
+        font-size: 13px;
+        padding: 6px 7px;
+    }
+    #hometop .htcontent .bone {
+        font-size: 14px !important;
+        margin-right: 10px;
+    }
+    #hometop .htcontent .btwo {
+        font-size: 14px !important;
+    }
+    #hometop .image img {
+        width: 100%;
+        padding-top: -0;
+    }
+    #hometop .htcontent {
+        padding-bottom: 43px;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    #hometop .htcontent h1 {
+        font-size: 23px;
+        margin: 0;
+    }
+    #hometop .htcontent {
+        padding-top: 40px;
+    }
+    #hometop .htcontent p {
+        width: 100%;
+        text-align: justify;
+    }
+    #hometop .htcontent .bone {
+        font-size: 13px !important;
+        padding: 9px 13px !important;
+        margin-right: 27px;
+    }
+    #hometop .htcontent .btwo{
+        font-size: 13px !important;
+        padding: 9px 13px !important;
+        margin-right: 27px;
+    }
+    #hometop .htcontent {
+        padding-bottom: 30px;
+    }
+    #hometop {
+        padding-bottom: 0;
+    }
+    #hometop .image img {
+        width: 100%;
+        padding-top: 15%;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    #hometop .htcontent h1 {
+        font-size: 35px;
+    }
+    #hometop .htcontent p {
+        width: 100%;
+        text-align: justify;
+    }
+    #hometop .htcontent {
+        padding-top: 43px;
+        padding-bottom: 0;
+    }
+    #hometop .htcontent .bone {
+        font-size: 14px !important;
+        margin-right: 18px;
+    }
+    #hometop .htcontent .btwo {
+        font-size: 14px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    #hometop .htcontent h1 {
+        font-size: 40px;
+    }
+    #hometop .htcontent p {
+        width: 100%;
+        text-align: justify;
+    }
+    #hometop .image .e2 {
+        top: 69%;
+        left: -34%;
+    }
+    #hometop .htcontent {
+        padding-top: 90px;
+        padding-bottom: 0;
+    }
+    #hometop .image img {
+        width: 81%;
+    }
+}
+@media (min-width:1200px) and (max-width:1399px){
+
+}
+
+
+

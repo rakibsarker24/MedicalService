@@ -1,0 +1,65 @@
+#registration{
+    padding-top: 160px;
+    padding-bottom: 80px;
+}
+#registration .body{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(128, 128, 128, 0.416);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#registration  .alert-primary {
+    margin-top: 14px;
+    color:white;
+    background-color: #3498db;
+}
+#registration  button {
+   width: 100%;
+   color:white;
+   background-color: #3498db;
+   font-family: 'Comfortaa', cursive;
+   margin-bottom: 10px;
+	margin-left: 0 !important;
+}
+#registration  input {
+   font-size: 12px !important;
+}
+#registration  .red {
+    color:rgb(240, 8, 8) !important;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+}
+#registration p {
+	font-family: 'Comfortaa', cursive;
+	font-size: 14px;
+	padding-top: 10px;
+	padding: 0;
+	text-align: center;
+}
+
+@media (min-width:320px) and (max-width:575px){
+    #registration  p {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+}
+@media (min-width:576px) and (max-width:767px){
+    #registration p {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+
+}
+@media (min-width:992px) and (max-width:1199px){
+
+}
+@media (min-width:1200px) and (max-width:1399px){
+
+}
