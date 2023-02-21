@@ -1,41 +1,42 @@
 import React from 'react'
 import '../bCart/bCart.css'
 import { Container,Row,Col,Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Bcart = () => {
   return (
     <section id='bcard'>
         <Container>
                 <Row className=' justify-content-center'>
-                    <Col lg='3'>
-                        <a href="">
+                    <Col lg='2'>
+                        <Link to="/">
                             <Card style={{ width: '100%' }}>
-                                <Card.Img variant="top" src="images/Pharmacy.png" />
+                                <Card.Img variant="top" src="images/bld2.jpg" />
                                 <Card.Body>
-                                    <Card.Title><label>Given Blood for save life</label></Card.Title>
+                                    <Card.Title><label>Benifit for Donate Bloot</label></Card.Title>
                                 </Card.Body>
                             </Card>
-                        </a>
+                        </Link>
                     </Col>
-                    <Col lg='3'>
-                        <a href="">
+                    <Col lg='2'>
+                        <Link to="/">
                             <Card style={{ width: '100%' }}>
-                                <Card.Img variant="top" src="images/Pharmacy.png" />
+                                <Card.Img variant="top" src="images/bld3.jpg" />
                                 <Card.Body>
                                     <Card.Title><label>Given Blood for save life</label></Card.Title>
                                 </Card.Body>
                             </Card>
-                        </a>
+                        </Link>
                     </Col>
-                    <Col lg='3'>
-                        <a href="">
+                    <Col lg='2'>
+                        <Link to="/">
                             <Card style={{ width: '100%' }}>
-                                <Card.Img variant="top" src="images/Pharmacy.png" />
+                                <Card.Img variant="top" src="images/bld3.jpg" />
                                 <Card.Body>
                                     <Card.Title><label>Given Blood for save life</label></Card.Title>
                                 </Card.Body>
                             </Card>
-                        </a>
+                        </Link>
                     </Col>
                     
                 </Row>

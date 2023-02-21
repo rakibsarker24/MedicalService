@@ -14,6 +14,8 @@ import Navber from './components/navber/Navber'
 import PdoctorDetails from './components/pages/PdoctorDetails'
 import Pagination from './components/pagination/Pagination';
 import ProductCard from './components/productCard/ProductCard'
+import Ambulance from './components/pages/Ambulance'
+import Doner from './components/pages/Doner'
 
 const App = () => {
   return (
@@ -33,6 +35,8 @@ const App = () => {
            <Route path='/doctorDetails' element={ <PdoctorDetails/>}></Route>
            <Route path='/page' element={ <Pagination/>}></Route>
            <Route path='/product' element={ <ProductCard/>}></Route>
+           <Route path='/ambulance' element={ <Ambulance/>}></Route>
+           <Route path='/doner' element={ <Doner/>}></Route>
         </Routes>
     </BrowserRouter>
   )

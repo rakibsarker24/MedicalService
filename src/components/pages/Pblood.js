@@ -4,6 +4,7 @@ import NavTop from '../navTop/NavTop'
 import Navber from '../navber/Navber'
 import Footer from '../footer/Footer'
 import Bslider from '../bSlider/Bslider'
+import SearchDoner from '../searchDoner/SearchDoner'
 
 const Pblood = () => {
   return (
@@ -11,6 +12,7 @@ const Pblood = () => {
         {/* <NavTop/> */}
         <Navber/>
         <Bslider/>
+        <SearchDoner/>
         <Bcart/>
         <Footer/>
     </>

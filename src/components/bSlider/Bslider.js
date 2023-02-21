@@ -12,14 +12,14 @@ const Bslider=()=>{
                     <Row>
                         <Col lg='7' sm='7' md='7'>
                             <div className="bcontent">
-                                <label>Donet Blood to Save Blood</label>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni iusto suscipit odio nisi dignissimos error. ipsum dolor sit amet consectetur adipisicing elit. Magni iusto suscipit odio nisi dignissimos error.</p>
-                                <a>Shop Now</a>
+                                <span>Donet Blood to Save Blood</span>
+                                <p style={{width:"100%"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni iusto suscipit odio nisi dignissimos error. ipsum dolor sit amet consectetur adipisicing elit. Magni iusto suscipit odio nisi dignissimos error.</p>
+                                <a>Go to Shop</a>
                             </div>
                         </Col>
                         <Col lg='5' sm='5' md='5'>
                             <div className="bimage">
-                                <img src='images/bld1.jpg' alt="image"/>
+                                <img src='images/bld1.jpg' alt="image" style={{width:"100%"}}/>
                             </div>
                         </Col>
                     </Row>

@@ -1,16 +1,15 @@
 import React from 'react'
 import Footer from '../footer/Footer'
-import NavTop from '../navTop/NavTop'
 import Navber from '../navber/Navber'
 import OurDoctor from '../ourdoctor/OurDoctor'
-import SearchDoctor from './../searchDoctor/SearchDoctor';
+import SearchDoner from './../searchDoner/SearchDoner';
+
 
 const Doctors = () => {
   return (
     <>
-        {/* <NavTop/> */}
         <Navber/>
-        <SearchDoctor/>
+        <SearchDoner/>
         <OurDoctor/>
         <Footer/>
     </>

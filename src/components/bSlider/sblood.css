@@ -1,8 +1,8 @@
 #bslider{
     padding-top: 150px !important;
 }
-#bslider .bcontent label{
-    font-size: 27px;
+#bslider .bcontent span{
+    font-size: 45px !important;
     color:#f52828;
     font-weight: 700;
     font-family: 'Comfortaa', 'cursive';;

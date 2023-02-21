@@ -1,20 +1,19 @@
 import React from 'react'
 import Footer from '../footer/Footer'
-import NavTop from '../navTop/NavTop'
 import Navber from '../navber/Navber'
 import OurDoctor from '../ourdoctor/OurDoctor'
-import SearchDoctor from './../searchDoctor/SearchDoctor';
+import SearchAmbulance from '../searchAmbulance/SearchAmbulance'
 
-const Doctors = () => {
+const Ambulance = () => {
   return (
     <>
         {/* <NavTop/> */}
         <Navber/>
-        <SearchDoctor/>
+        <SearchAmbulance/>
         <OurDoctor/>
         <Footer/>
     </>
   )
 }
 
-export default Doctors
+export default Ambulance

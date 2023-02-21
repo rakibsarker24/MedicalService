@@ -1,6 +1,12 @@
-#bcard{
-    margin-top: 50px;
+#bcard {
+    margin-top: 80px;
+    margin-bottom: 100px;
 }
-label{
-    color:red;
+#bcard label {
+    color: #3498db;
+    font-size: 18px !important;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
 }
+
