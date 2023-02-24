@@ -62,11 +62,11 @@ const Navber = () => {
                     </NavDropdown>
                         <NavLink to="/shop">Shop</NavLink>
                         <NavLink to="/blog">Blog</NavLink>
-                        <NavLink to="/about">About</NavLink>
+                        <NavLink to="/about">Contact</NavLink>
                   </Nav>
 
                 <div className='navIcons flex'>
-                    <Link to='/'><FaShoppingCart className='nicon'/></Link>
+                    <Link to='/addcard'><FaShoppingCart className='nicon'/></Link>
                     <Link to='/login'><MdAccountCircle className='nicon'/></Link>
                 </div>
                 </Navbar.Collapse>

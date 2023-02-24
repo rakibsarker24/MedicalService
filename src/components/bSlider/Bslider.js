@@ -1,6 +1,7 @@
-import react from "react";
+import React from "react";
 import '../bSlider/sblood.css'
 import { Container,Row,Col, } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 
@@ -14,7 +15,7 @@ const Bslider=()=>{
                             <div className="bcontent">
                                 <span>Donet Blood to Save Blood</span>
                                 <p style={{width:"100%"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni iusto suscipit odio nisi dignissimos error. ipsum dolor sit amet consectetur adipisicing elit. Magni iusto suscipit odio nisi dignissimos error.</p>
-                                <a>Go to Shop</a>
+                                <Link to='/pdoner'>Donate Blood</Link>
                             </div>
                         </Col>
                         <Col lg='5' sm='5' md='5'>

@@ -1,0 +1,62 @@
+#contact{
+    padding-top: 180px;
+    padding-bottom: 40px;
+}
+#contact .itemform .ctextarea{
+    height: 150px;
+    margin-bottom: 30px;
+}
+#contact .itemform .btn {
+	font-size: 15px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 800;
+	padding: 10px 15px;
+	border-radius: 25px;
+	transition: .4s;
+	-webkit-transition: .4s;
+	-moz-transition: .4s;
+	-ms-transition: .4s;
+	-o-transition: .4s;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	background-color: #2abdf2;
+    border: 1px solid #2abdf2 !important;
+}
+#contact .itemform  .btn:hover {
+    color: #2abdf2 !important;
+    background-color: #f7f7f7 !important;
+}
+
+#contact h2{
+    font-size: 27px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    width: 600px;
+    color:#12a8d1;
+    margin-bottom: 30px;
+}
+#contact span{
+    font-size: 27px !important;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    width: 600px;
+    color:#5a5a5a !important;
+}
+#contact .ccontent h4{
+    font-size: 27px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    width: 600px;
+    color:#12a8d1;
+    margin-bottom: 22px;
+}
+#contact .ccontent p{
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color:#494949;
+    margin-bottom: 0;
+    padding-top: 7px;
+}

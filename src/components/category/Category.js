@@ -44,7 +44,7 @@ const Category = () => {
                         </NavLink>
                     </Col>
                     <Col lg='3' sm='6' md='4'>
-                        <NavLink to='/'>
+                        <NavLink to='/ambulance'>
                             <div className="card-content">
                                     <span><FaAmbulance/></span>
                                     <h3>Ambulance</h3>

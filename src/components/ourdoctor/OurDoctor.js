@@ -40,10 +40,10 @@ const OurDoctor = () => {
                     </Col>
                     <Col lg='3' className='mb-4' sm='6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src="images/d1.jpg" />
+                            <Card.Img variant="top" src="images/d14.jpg" />
                             <Card.Body>
                                 <div className="btitle">
-                                    <a>Dr. Md Pias Uddin</a>
+                                    <a>Dr. Asma Khatun</a>
                                 </div>
                                 <span>MBBS, FCPS (Psych),Professor & Ex. Chairman, Psychiatry & Psychotherapy</span>
                                 <p>
@@ -59,10 +59,10 @@ const OurDoctor = () => {
                     </Col>
                     <Col lg='3' className='mb-4' sm='6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src="images/d1.jpg" />
+                            <Card.Img variant="top" src="images/d12.jpg" />
                             <Card.Body>
                                 <div className="btitle">
-                                    <a>Dr. Md Pias Uddin</a>
+                                    <a>Dr. Junnur Hashan</a>
                                 </div>
                                 <span>MBBS, FCPS (Psych),Professor & Ex. Chairman, Psychiatry & Psychotherapy</span>
                                 <p>
@@ -78,10 +78,10 @@ const OurDoctor = () => {
                     </Col>
                     <Col lg='3' className='mb-4' sm='6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src="images/d1.jpg" />
+                            <Card.Img variant="top" src="images/d13.jpg" />
                             <Card.Body>
                                 <div className="btitle">
-                                    <a>Dr. Md Pias Uddin</a>
+                                    <a>Dr. Joti Begum</a>
                                 </div>
                                 <span>MBBS, FCPS (Psych),Professor & Ex. Chairman, Psychiatry & Psychotherapy</span>
                                 <p>

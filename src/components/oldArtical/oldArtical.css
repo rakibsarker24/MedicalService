@@ -1,15 +1,15 @@
 
-#newarticle{
-    padding-top: 140px;
+#oldarticle{
+    padding-top: 80px;
 }
-#newarticle .btitle a{
+#oldarticle .btitle a{
     font-size: 22px;
     font-family: 'Comfortaa', cursive;
     font-weight: 800;
     color:#343434;
     padding: 0;
 }
-#newarticle .title p{
+#oldarticle .title p{
     font-size: 14px;
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
@@ -17,7 +17,7 @@
     color:#909090;
     margin:0 auto;
 }
-#newarticle p{
+#oldarticle p{
     font-size: 13px;
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
@@ -25,18 +25,18 @@
     margin-bottom: 0;
     padding-top: 7px;
 }
-#newarticle span{
+#oldarticle span{
     font-size: 14px;
     font-family: 'Comfortaa', cursive;
     font-weight: 800;
     color:#12a8d1;
 }
-#newarticle .bicon span{
+#oldarticle .bicon span{
     font-size: 20px;
     cursor: pointer;
     color:#494949;
 }
-#newarticle a{
+#oldarticle a{
     font-family: 'Comfortaa', cursive;
     font-size: 13px;
     text-decoration: none;
@@ -49,24 +49,24 @@
     -ms-transition: .4s;
     -o-transition: .4s;
 }
-#newarticle a:hover{
+#oldarticle a:hover{
     color:#12a8d1;
 }
-#newarticle .bicon span:first{
+#oldarticle .bicon span:first{
     font-family: 'Comfortaa', cursive;
     font-size: 1px;
     text-decoration: none;
     cursor: pointer;
     color:#12a8d1;
 }
-#newarticle .bicon span:last-child{
+#oldarticle .bicon span:last-child{
     text-align: right;
     padding-left:85%;
 }
-#newarticle .bicon{
+#oldarticle .bicon{
     padding-top: 10px;
 }
-#newarticle .bicon span:hover{
+#oldarticle .bicon span:hover{
     color:#12a8d1;
 }
 
@@ -75,26 +75,26 @@
     .title h2 {
         font-size: 24px;
     }
-    #newarticle .title p {
+    #oldarticle .title p {
         font-size: 13px;
         width: 100% !important;
         text-align: center;
     }
-    #newarticle .btitle a {
+    #oldarticle .btitle a {
         font-size: 20px;
     }
-    #newarticle span {
+    #oldarticle span {
         font-size: 13px;
     }
-    #newarticle p {
+    #oldarticle p {
         font-size: 13px;
         text-align: justify;
         width: 100%;
     }
-    #newarticle a {
+    #oldarticle a {
         padding-left: 55%;
     }
-    #newarticle .bicon span:last-child {
+    #oldarticle .bicon span:last-child {
         padding-left: 84%;
     }
     .title {
@@ -103,62 +103,53 @@
     #newarticle {
         margin-bottom: 38px;
     }
-    /* #newarticle .title p {
-	font-size: 14px;
-	font-family: 'Comfortaa', cursive;
-	font-weight: 400;
-	width: 600px;
-	color: #909090;
-	margin: 0 auto;
-	text-align: center;
-	width: 100%;
-    } */
 }
+
 @media (min-width:576px) and (max-width:767px){
-    #newarticle .title p {
+    #oldarticle .title p {
         width: 80%;
         text-align: center;
     }
-    #newarticle a {
+    #oldarticle a {
         padding-left: 45%;
     }
-    #newarticle .bicon span:last-child {
+    #oldarticle .bicon span:last-child {
         padding-left: 80%;
     }
-    #newarticle {
+    #oldarticle {
         margin-bottom: 38px;
     }
     
 }
 @media (min-width:768px) and (max-width:991px){
-    #newarticle p {
+    #oldarticle p {
         font-size: 14px;
         text-align: justify;
     }
-    #newarticle .title p {
+    #oldarticle .title p {
         text-align: center;
     }
-    #newarticle {
+    #oldarticle {
         margin-bottom: 45px;
     }
 }
 @media (min-width:992px) and (max-width:1199px){
-    #newarticle .btitle a {
+    #oldarticle .btitle a {
         font-size: 20px;
     }
-    #newarticle a {
+    #oldarticle a {
         font-family: 'Comfortaa', cursive;
         font-size: 14px;
         padding-left: 29%;
     }
-    #newarticle p {
+    #oldarticle p {
         font-size: 14px;
         text-align: justify;
     }
-    #newarticle .bicon span:last-child {
+    #oldarticle .bicon span:last-child {
         padding-left: 78%;
     }
-    #newarticle .title p {
+    #oldarticle .title p {
         text-align: center;
     }
 }

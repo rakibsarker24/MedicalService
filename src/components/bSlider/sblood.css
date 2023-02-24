@@ -3,7 +3,7 @@
 }
 #bslider .bcontent span{
     font-size: 45px !important;
-    color:#f52828;
+    color: #3498db;
     font-weight: 700;
     font-family: 'Comfortaa', 'cursive';;
 }
@@ -24,9 +24,10 @@
     font-weight: 400;
     font-family: 'Comfortaa', 'cursive';
     border-radius: 25px;
-    background-color: #f52828;
-    border: 1px solid #f52828;
+    background-color: #3498db;
+    border: 1px solid #3498db;
     padding: 10px 15px;
+    text-decoration: none;
     cursor: pointer;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -39,9 +40,9 @@
     -o-transition: .4s;
 }
 #bslider .bcontent a:hover{
-    color:#f52828;
+    color:#3498db;
     background-color: white;
-    border: 1px solid #f52828;
+    border: 1px solid #3498db;
 }
 #bslider .bimage img{
     width: 60%;

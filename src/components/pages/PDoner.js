@@ -1,16 +1,16 @@
 import React from 'react'
 import Footer from '../footer/Footer'
-import NavTop from '../navTop/NavTop'
 import Navber from '../navber/Navber'
+import Donerform from '../donerForm/DonerForm'
 
-const AboutUs = () => {
+const PDoner = () => {
   return (
     <>
-        {/* <NavTop/> */}
         <Navber/>
+        <Donerform/>
         <Footer/>
     </>
   )
 }
 
-export default AboutUs
+export default PDoner
