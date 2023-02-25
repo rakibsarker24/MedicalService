@@ -8,7 +8,7 @@ const Bcart = () => {
     <section id='bcard'>
         <Container>
                 <Row className=' justify-content-center'>
-                    <Col lg='2'>
+                    <Col lg='2' sm='4' mb='3' className='mb-3'>
                         <Link to="/">
                             <Card style={{ width: '100%' }}>
                                 <Card.Img variant="top" src="images/bld2.jpg" />
@@ -18,7 +18,7 @@ const Bcart = () => {
                             </Card>
                         </Link>
                     </Col>
-                    <Col lg='2'>
+                    <Col lg='2' sm='4' mb='3' className='mb-3'>
                         <Link to="/">
                             <Card style={{ width: '100%' }}>
                                 <Card.Img variant="top" src="images/bld3.jpg" />
@@ -28,7 +28,7 @@ const Bcart = () => {
                             </Card>
                         </Link>
                     </Col>
-                    <Col lg='2'>
+                    <Col lg='2' sm='4' mb='3' className='mb-3'>
                         <Link to="/">
                             <Card style={{ width: '100%' }}>
                                 <Card.Img variant="top" src="images/bld3.jpg" />

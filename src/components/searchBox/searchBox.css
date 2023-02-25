@@ -1,0 +1,53 @@
+#searchbox{
+    padding-top: 50px;
+}
+#searchbox .searchinput {
+    display: flex;
+    position: relative;
+}
+#searchbox .searchinput input {
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color: #2a2a2a;
+    width: 75%;
+    padding: 10px 10px;
+    border: .5px solid #3498db;;
+}
+#searchbox .searchinput span {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 50px;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+    position: absolute;
+    right: 0;
+}
+#searchbox .or h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #6e6e6e;
+    padding-top:80px;
+    font-size: 22px;
+}
+
+@media (min-width:320px) and (max-width:575px){
+    #searchbox .searchinput span {
+        padding: 10.5px 15px;
+        font-size: 15px;
+    }
+    #searchbox .searchinput input {
+        margin: 0 !important;
+        width: 85%;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px){
+    #searchbox .searchinput span {
+        padding: 9.5px 28px;
+        font-size: 16px;
+    }
+    #searchbox .searchinput input {
+        width: 97%;
+    }
+}

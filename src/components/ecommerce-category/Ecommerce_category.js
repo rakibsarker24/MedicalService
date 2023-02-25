@@ -7,14 +7,14 @@ const Ecommerce_category = () => {
   return (
     <section id='e_category'>
             <Container>
-                <Row>
+                {/* <Row>
                     <Col lg='12'>
                        <div className="title">
                        <h2>Choice Catagory</h2>
                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorem omnis iure enim totam voluptatem amet vel reprehenderit quia laudantium?</p>
                        </div>
                     </Col>
-                </Row>
+                </Row> */}
                 <Row>
                     <Col lg='3' xs='6' md='3' sm='3'>
                         <a href='#'>

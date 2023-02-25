@@ -3,8 +3,8 @@ import Slider from '../slider/Slider'
 import Ecommerce_category from '../ecommerce-category/Ecommerce_category'
 import Footer from '../footer/Footer'
 import PopularPro from '../popularPro/PopularPro'
-import NavTop from '../navTop/NavTop'
 import Navber from '../navber/Navber'
+import SearchBox from '../searchBox/SearchBox'
 
 const Shop = () => {
   return (
@@ -12,6 +12,7 @@ const Shop = () => {
         {/* <NavTop/> */}
         <Navber/>
         <Slider/>
+        <SearchBox/>
         <Ecommerce_category/>
         <PopularPro/>
         <Footer/>

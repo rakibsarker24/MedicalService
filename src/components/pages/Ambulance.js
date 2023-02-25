@@ -3,6 +3,7 @@ import Footer from '../footer/Footer'
 import Navber from '../navber/Navber'
 import OurDoctor from '../ourdoctor/OurDoctor'
 import SearchAmbulance from '../searchAmbulance/SearchAmbulance'
+import PopularAmbulance from '../popularAmbulance/PopularAmbulance'
 
 const Ambulance = () => {
   return (
@@ -10,7 +11,7 @@ const Ambulance = () => {
         {/* <NavTop/> */}
         <Navber/>
         <SearchAmbulance/>
-        <OurDoctor/>
+        <PopularAmbulance/>
         <Footer/>
     </>
   )

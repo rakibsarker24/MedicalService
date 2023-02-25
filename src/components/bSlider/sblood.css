@@ -50,3 +50,55 @@
 #bslider .bimage{
     text-align: center;
 }
+
+
+@media (min-width:320px) and (max-width:575px){
+    #bslider {
+        padding-top: 110px !important;
+    }
+    #bslider .bcontent span {
+        font-size: 27px !important;
+    }
+    #bslider .bcontent p {
+        font-size: 13px;
+        text-align: justify;
+    }
+    #bslider .bimage {
+        padding-top: 50px;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    #bslider {
+        padding-top: 95px !important;
+        padding-bottom: 40px;
+    }
+    #bslider .bcontent span {
+        font-size: 24px !important;
+    }
+    #bslider .bcontent p {
+        font-size: 13px;
+        text-align: justify;
+    }
+    #bslider .bcontent a {
+        font-size: 14px;
+    }
+    #bslider .bimage {
+        margin-top: 13%;
+    }
+    
+}
+@media (min-width:768px) and (max-width:991px){
+    #bslider {
+        padding-top: 95px !important;
+        padding-bottom: 50px;
+    }
+    #bslider .bcontent span {
+        font-size: 31px !important;
+    }
+    #bslider .bimage {
+        margin-top: 7%;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+
+}

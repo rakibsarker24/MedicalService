@@ -1,0 +1,98 @@
+
+#popularAmbulance{
+    padding-top: 100px;
+}
+#popularAmbulance .btitle a{
+    font-size: 22px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    color:#343434;
+    padding: 0;
+}
+#popularAmbulance .title p{
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    width: 600px;
+    color:#909090;
+    margin:0 auto;
+}
+#popularAmbulance .amicon{
+    font-size: 14px;
+    color:#12a8d1;
+}
+#popularAmbulance p{
+    font-size: 13px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color:#494949;
+    margin-bottom: 0;
+    padding-top: 7px;
+}
+#popularAmbulance span{
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    color:#12a8d1;
+}
+#popularAmbulance .bicon span{
+    font-size: 20px;
+    cursor: pointer;
+    color:#494949;
+}
+#popularAmbulance a{
+    font-family: 'Comfortaa', cursive;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    color:#919191;
+    padding-left:68%;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+#popularAmbulance a:hover{
+    color:#12a8d1;
+}
+#popularAmbulance .bicon span:first{
+    font-family: 'Comfortaa', cursive;
+    font-size: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    color:#12a8d1;
+}
+#popularAmbulance .bicon span:last-child{
+    text-align: right;
+    padding-left:85%;
+}
+#popularAmbulance .bicon{
+    padding-top: 10px;
+}
+#popularAmbulance .bicon span:hover{
+    color:#12a8d1;
+}
+
+@media (min-width:320px) and (max-width:575px){
+    #popularAmbulance{
+        padding-top: 150px;
+    }
+    #popularAmbulance .btitle a {
+        font-size: 20px;
+    }
+    #popularAmbulance span {
+        font-size: 12px;
+    }
+    #popularAmbulance a {
+        padding-left: 66%;
+    }
+    #popularAmbulance .title p {
+        width: 100%;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    #popularAmbulance .title p {
+        width: 100%;
+    }
+}

@@ -89,7 +89,7 @@ const Category = () => {
                         </NavLink>
                     </Col>
                     <Col lg='3' sm='6' md='4'>
-                        <NavLink to='/'>
+                        <NavLink to='/about'>
                             <div className="card-content">
                                     <span><FaQuestion/></span>
                                     <h3>Have Any FAQ</h3>
