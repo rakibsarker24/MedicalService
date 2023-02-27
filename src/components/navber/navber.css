@@ -53,16 +53,36 @@
 	width: 10%;
 	display: flex;
 	justify-content: right;
+  position: relative;
 }
 .nicon{
   font-size: 20px;
 }
 
 .navIcons span{
+  font-family: 'Comfortaa', cursive;
   font-size: 20px;
   color:white;
   padding-left: 10px;
   cursor: pointer;
+}
+.navIcons .numcart p {
+	position: absolute;
+	top: -24%;
+	left: 51%;
+	font-family: 'Comfortaa', cursive;
+	font-size: 10px;
+	color: white;
+	background-color: red;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	padding-top: 1px;
 }
 .navIcons span:hover{
   color:rgb(49, 49, 49);
@@ -109,6 +129,9 @@
   .brandlogo {
     width: 49%;
   }
+  .navIcons .numcart p {
+    left: 46%;
+  }
  
 }
 @media (min-width:576px) and (max-width:767px){
@@ -138,7 +161,10 @@
   .navIcons span {
     padding: 0 10px;
   }
-
+  .navIcons .numcart p {
+    top: -19%;
+    left: 48%;
+  }
 
 }
 @media (min-width:768px) and (max-width:991px){
@@ -165,6 +191,10 @@
   }
   .navIcons {
     margin-right: 15px !important;
+  }
+  .navIcons .numcart p {
+    top: -16%;
+    left: 48%;
   }
 
 }
@@ -193,6 +223,10 @@
   }
   .navIcons {
     width: 6%;
+  }
+  .navIcons .numcart p {
+    top: -24%;
+    left: 23%;
   }
   
 }

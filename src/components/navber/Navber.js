@@ -67,6 +67,9 @@ const Navber = () => {
 
                 <div className='navIcons flex'>
                     <Link to='/addcard'><FaShoppingCart className='nicon'/></Link>
+                    <div className="numcart">
+                      <p>0</p>
+                    </div>
                     <Link to='/login'><MdAccountCircle className='nicon'/></Link>
                 </div>
                 </Navbar.Collapse>
