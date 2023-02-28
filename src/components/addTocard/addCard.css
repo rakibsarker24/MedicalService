@@ -271,10 +271,113 @@
     color: #3498db ;
     font-size: 22px;
 }
-#addcard .marcent span{
-    color: #333;
-    font-weight: 400;
-    font-family: 'Comfortaa', cursive;
-    font-size: 14px;
-    padding-right: 5px;
+#addcard .marcent img{
+    width: 70px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
+margin-left: 18px;
+}
+
+
+@media (min-width:320px) and (max-width:575px){
+    #addcard .imageitem .subimage .item img {
+        width: 104px;
+    }
+    #addcard .allitems h2 {
+        font-size: 24px;
+        padding-top: 20px;
+    }
+    #addcard .allitems p {
+        font-size: 13px;
+        text-align: justify;
+    }
+    #addcard .allitems .add span {
+        font-size: 18px;
+        padding: 0 5px;
+    }
+    #addcard .cbtn button {
+        font-size: 15px;
+        margin: 0 !important;
+    }
+    #addcard .delivery {
+        margin-top: 30px;
+    }
+    #addcard .delivery .indhaka span {
+        font-size: 13px;
+    }
+    #addcard .delivery .outdhaka span {
+        font-size: 13px;
+    }
+    #addcard .marcent  {
+        margin-top: 30px;
+    }
+    #addcard .list  {
+        margin-left: 9px;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    #addcard .allitems h2 {
+        font-size: 24px;
+    }
+    #addcard .allitems p {
+        font-size: 13px;
+        text-align: justify;
+    }
+    #addcard .allitems .size strong {
+        font-size: 15px;
+    }
+    #addcard .allitems .add span {
+        font-size: 18px;
+        padding: 0 5px;
+    }
+    #addcard .cbtn button {
+        font-size: 15px;
+        margin: 0 !important;
+    }
+    #addcard .delivery {
+        margin-top: 30px;
+    }
+    #addcard .delivery .indhaka span {
+        font-size: 13px;
+    }
+    #addcard .delivery .outdhaka span {
+        font-size: 13px;
+    }
+    #addcard .marcent  {
+        margin-top: 30px;
+    }
+    #addcard .list  {
+        margin-left: 9px;
+    }
+    #addcard .imageitem .subimage .item img {
+        width: 90px;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    #addcard .delivery {
+        margin-top: 30px;
+    }
+    #addcard .list  {
+        margin-left: 9px;
+    }
+    #addcard .imageitem .subimage .item img {
+        width: 110px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    #addcard .imageitem .subimage .item img {
+        width: 96px;
+    }
+    #addcard .delivery p {
+        font-size: 21px;
+    }
+}
+@media (min-width:1200px) and (max-width:1399px){
+
 }

@@ -9,10 +9,10 @@ const  AddCard= () => {
     <section id='addcard'>
         <Container>
             <Row>
-                <Col lg='4' >
+                <Col lg='4' sm='6' md='6' >
                     <div className="imageitem">
                         <div className="main">
-                            <img src="images/Hand Gloves.png" alt="main Image" />
+                            <img src="images/Hand Gloves.png" alt="main Image" style={{width:"100%"}}/>
                         </div>
                         <div className="subimage flex">
                                 <div className="item">
@@ -27,7 +27,7 @@ const  AddCard= () => {
                         </div>
                     </div>
                 </Col>
-                <Col lg='5' >
+                <Col lg='5' sm='6' md='6' >
                     <div className="allitems">
                         <h2>Hand Gloves</h2>
                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, doloremque. Reiciendis sunt ea asperiores minima quisquam atque repellat totam quam!</p>
@@ -47,12 +47,6 @@ const  AddCard= () => {
                             <label>M</label>
                             <label>L</label>
                             <label>XL</label>
-                        </div>
-                        <div className="color">
-                            <strong>Color: </strong>
-                            <label></label>
-                            <label></label>
-                            <label></label>
                         </div>
                         <div className="add">
                             <strong>+</strong>
@@ -75,8 +69,8 @@ const  AddCard= () => {
                                 <label>Outsite Dhaka City</label>
                                 <span>Cash on Delevery: 2$</span>
                             </div>
+                             <hr />
                     </div>
-                    <hr />
                     <div className="delivery">
                             <p>Retun and Warrenty:</p>
                             <div className="list">
@@ -86,13 +80,13 @@ const  AddCard= () => {
                                     <li>Not Warrenty</li>
                                 </ul>
                             </div>
+                            <hr />
                     </div>
                     <div className="marcent">
                             <p>Merchant </p>
                             <div className="">
-                                <span>Bikas</span>
-                                <span>Nogot</span>
-                                <span>Visa Card</span>
+                                <span> <img src="images/bikash.jpg" alt="" /></span>
+                                <span><img src="images/roket.jpg" alt="" /></span>
                             </div>
                            
                     </div>
