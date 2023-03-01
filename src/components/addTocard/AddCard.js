@@ -3,8 +3,13 @@ import '../addTocard/addCard.css'
 import { Container,Row,Col,Button } from 'react-bootstrap'
 import { AiFillStar } from 'react-icons/ai';
 import { BsStar } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 
 const  AddCard= () => {
+    const navigate = useNavigate();
+    let handleClick=()=>{
+        navigate("/purchaseProduct");
+    }
   return (
     <section id='addcard'>
         <Container>
@@ -54,7 +59,7 @@ const  AddCard= () => {
                             <strong>-</strong>
                         </div>
                         <div className="cbtn">
-                            <Button>Order Now</Button>
+                            <Button onClick={handleClick}>Order Now</Button>
                         </div>
                     </div>
                 </Col>

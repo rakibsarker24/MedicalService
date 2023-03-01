@@ -87,6 +87,13 @@
 .navIcons span:hover{
   color:rgb(49, 49, 49);
 }
+#navber .offcanvas.show:not(.hiding), .offcanvas.showing {
+  margin-top: 75px !important;
+}
+.offcanvas.show:not(.hiding), .offcanvas.showing {
+	transform: none;
+	margin-top: 75px;
+}
 
 
 @media (min-width:320px) and (max-width:575px){
@@ -132,6 +139,7 @@
   .navIcons .numcart p {
     left: 46%;
   }
+  
  
 }
 @media (min-width:576px) and (max-width:767px){

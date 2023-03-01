@@ -16,6 +16,7 @@ import ProductCard from './components/productCard/ProductCard'
 import Ambulance from './components/pages/Ambulance'
 import Doner from './components/pages/Doner'
 import PDoner from './components/pages/PDoner'
+import PPurchaseProduct from './components/pages/PPurchaseProduct';
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
            <Route path='/ambulance' element={ <Ambulance/>}></Route>
            <Route path='/doner' element={ <Doner/>}></Route>
            <Route path='/pdoner' element={ <PDoner/>}></Route>
+           <Route path='/purchaseProduct' element={ <PPurchaseProduct/>}></Route>
         </Routes>
     </BrowserRouter>
   )

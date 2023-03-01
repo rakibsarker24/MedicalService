@@ -1,15 +1,21 @@
-import React from 'react'
+import { useState } from 'react';
 import '../navber/navber.css'
-import {Container, Row,Col,Nav,Navbar,NavDropdown} from 'react-bootstrap';
+import {Container, Row,Col,Nav,Navbar,NavDropdown,Offcanvas} from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
 import { MdAccountCircle } from 'react-icons/md';
-import { NavLink,Link } from 'react-router-dom';
+import { NavLink,Link, useNavigate } from 'react-router-dom';
 import { IoIosCall } from 'react-icons/io';
 import { MdEmail } from 'react-icons/md';
 import { FaFacebookMessenger } from 'react-icons/fa';
 import { BsFacebook } from 'react-icons/bs';
 
 const Navber = () => {
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
   return (
     <>
         <section id="navber" className='navtop'>
@@ -66,7 +72,17 @@ const Navber = () => {
                   </Nav>
 
                 <div className='navIcons flex'>
-                    <Link to='/addcard'><FaShoppingCart className='nicon'/></Link>
+                    <Link variant="primary" onClick={handleShow} ><FaShoppingCart className='nicon'/>
+                      <Offcanvas show={show} onHide={handleClose}>
+                          <Offcanvas.Header closeButton>
+                          <Offcanvas.Title>All Cards</Offcanvas.Title>
+                          </Offcanvas.Header>
+                          <Offcanvas.Body>
+                          Some text as placeholder. In real life you can have the elements you
+                          have chosen. Like, text, images, lists, etc.
+                          </Offcanvas.Body>
+                      </Offcanvas>
+                    </Link>
                     <div className="numcart">
                       <p>0</p>
                     </div>
@@ -77,6 +93,7 @@ const Navber = () => {
             </Navbar>
         </section>
     </>
+    
   )
 }
 

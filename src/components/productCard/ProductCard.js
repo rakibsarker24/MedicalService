@@ -1,5 +1,6 @@
 import react from 'react'
 import {Col,Card,Button } from 'react-bootstrap'
+import { NavLink,Link } from 'react-router-dom'
 
 
 const ProductCard = (props) => {
@@ -16,7 +17,7 @@ const ProductCard = (props) => {
                                 <label>price</label>
                                 <span>56</span>
                                 </Card.Text>
-                                <Button variant="primary">Add to Card</Button>
+                                <NavLink to='/addcard' variant="primary">Add to Card</NavLink>
                     </Card.Body>
                 </Card>
             </Col>
