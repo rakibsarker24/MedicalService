@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container,Row,Col,Card,Button } from 'react-bootstrap'
 import '../ecommerce-category/ecommerce_category.css'
+import { Link } from 'react-router-dom'
 
 
 const Ecommerce_category = () => {
@@ -17,76 +18,75 @@ const Ecommerce_category = () => {
                 </Row> */}
                 <Row>
                     <Col lg='3' xs='6' md='3' sm='3'>
-                        <a href='#'>
+                        <Link to='/tablet'>
                             <div className="card-content">
                             <img src="images/Pharmacy.png" alt="Pharmacy" />
                                     {/* <span><FaNotesMedical/></span> */}
-                                    <h3>Pharmacy</h3>
+                                    <h3>Tablet </h3>
                              </div>
-                        </a>
+                        </Link>
                     </Col>
                     <Col lg='3' xs='6' md='3' sm='3'>
-                        <a href='#'>
+                        <Link to='/sirap'>
                             <div className="card-content">
                             <img src="images/Medicine.png" alt="Medicine" />
                                     {/* <span><RiVideoChatFill/></span> */}
-                                    <h3>Medicine</h3>
+                                    <h3>Sirap </h3>
                              </div>
-                        </a>
+                        </Link>
                     </Col>
                     <Col lg='3' xs='6' md='3' sm='3'>
-                        <a href='#'>
+                        <Link to='/crime'>
                             <div className="card-content">
-                            <img src="images/Nutritions.png" alt="Nutritions" />
+                            <img src="images/ointment.png" alt="Nutritions" />
                                     {/* <span><FaAmbulance/></span> */}
-                                    <h3>Nutritions</h3>
+                                    <h3>Creme </h3>
                              </div>
-                        </a>
+                        </Link>
                     </Col>
                     <Col lg='3' xs='6' md='3' sm='3'>
-                        <a href='#'>
+                        <Link to='/injections'>
                             <div className="card-content">
-                            <img src="images/Hand Gloves.png" alt="Hand Gloves" />
-                                    {/* <span><BiDonateBlood/></span> */}
-                                    <h3>Hand Gloves</h3>
+                            <img src="images/injection.png" alt="" />
+                                    {/* <span><FaDonate/></span> */}
+                                    <h3>Injections</h3>
                              </div>
-                        </a>
+                        </Link>
                     </Col>
                     <Col lg='3' xs='6' md='3' sm='3'>
-                        <a href='#'>
+                        <Link to='/drope'>
+                            <div className="card-content">
+                            <img src="images/eye-drops.png" alt="Hand Gloves" />
+                                    <h3>Drops </h3>
+                             </div>
+                        </Link>
+                    </Col>
+                    <Col lg='3' xs='6' md='3' sm='3'>
+                        <Link to='/component'>
                             <div className="card-content">
                             <img src="images/Medkits.png" alt="" />
-                                    {/* <span><FaClinicMedical/></span> */}
-                                    <h3>Medkits</h3> 
+                                    <h3>Medical Components</h3> 
                              </div>
-                        </a>
+                        </Link>
                     </Col>
+                    
                     <Col lg='3' xs='6' md='3' sm='3'>
-                        <a href='#'>
-                            <div className="card-content">
-                            <img src="images/Surgical Mask.png" alt="" />
-                                    {/* <span><FaDonate/></span> */}
-                                    <h3>Surgical Mask</h3>
-                             </div>
-                        </a>
-                    </Col>
-                    <Col lg='3' xs='6' md='3' sm='3'>
-                        <a href='#'>
+                        <Link to='/equipment'>
                             <div className="card-content">
                             <img src="images/Safety Guard.png" alt="" />
                                     {/* <span><MdAddShoppingCart/></span> */}
-                                    <h3>Safety Guard</h3>
+                                    <h3>Safety Equipment</h3>
                              </div>
-                        </a>
+                        </Link>
                     </Col>
                     <Col lg='3' xs='6' md='3' sm='3'>
-                        <a href='#'>
+                        <Link to='/babyCare'>
                             <div className="card-content">
-                                <img src="images/Equipments.png" alt="" />
+                                <img src="images/baby.png" alt="" />
                                     {/* <span><FaQuestion/></span> */}
-                                    <h3>Equipments</h3>
+                                    <h3>Baby Care</h3>
                              </div>
-                        </a>
+                        </Link>
                     </Col>
                 </Row>
             </Container>

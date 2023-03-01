@@ -17,6 +17,14 @@ import Ambulance from './components/pages/Ambulance'
 import Doner from './components/pages/Doner'
 import PDoner from './components/pages/PDoner'
 import PPurchaseProduct from './components/pages/PPurchaseProduct';
+import Ptablet from './components/pages/Ptablet'
+import Psirap from './components/pages/Psirap'
+import Pcrime from './components/pages/Pcrime'
+import Pinjections from './components/pages/Pinjections'
+import Pdrope from './components/pages/Pdrope'
+import PmedicalComponent from './components/pages/PmedicalComponent'
+import PSafetyEquipment from './components/pages/PSafetyEquipment'
+import PbabyCare from './components/pages/PbabyCare'
 
 const App = () => {
   return (
@@ -40,6 +48,14 @@ const App = () => {
            <Route path='/doner' element={ <Doner/>}></Route>
            <Route path='/pdoner' element={ <PDoner/>}></Route>
            <Route path='/purchaseProduct' element={ <PPurchaseProduct/>}></Route>
+           <Route path='/tablet' element={ <Ptablet/>}></Route>
+           <Route path='/sirap' element={ <Psirap/>}></Route>
+           <Route path='/crime' element={ <Pcrime/>}></Route>
+           <Route path='/injections' element={ <Pinjections/>}></Route>
+           <Route path='/drope' element={ <Pdrope/>}></Route>
+           <Route path='/component' element={ <PmedicalComponent/>}></Route>
+           <Route path='/equipment' element={ <PSafetyEquipment/>}></Route>
+           <Route path='/babyCare' element={ <PbabyCare/>}></Route>
         </Routes>
     </BrowserRouter>
   )
