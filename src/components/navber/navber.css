@@ -1,10 +1,10 @@
 
 #navber{
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   position: fixed;
   width: 100%;
   left: 0;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   z-index: 9999999;
 }
 #navber .brandlogo{

@@ -37,12 +37,10 @@ const Navber = () => {
                         <div className="icon">
                         <span><BsFacebook/></span>
                         <span><FaFacebookMessenger/></span>
-                        {/* <span><AiFillTwitterCircle/></span> */}
                         </div>
                     </Col>
                 </Row>
             </Container>
-        {/* </section> */}
 
         {/* <section id='menu'> */}
             <Navbar bg="" expand="lg" className='menu'>

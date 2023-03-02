@@ -25,11 +25,12 @@ import Pdrope from './components/pages/Pdrope'
 import PmedicalComponent from './components/pages/PmedicalComponent'
 import PSafetyEquipment from './components/pages/PSafetyEquipment'
 import PbabyCare from './components/pages/PbabyCare'
+import Navber from './components/navber/Navber'
 
 const App = () => {
   return (
+    <>
     <BrowserRouter>
-        {/* <Navber/> */}
         <Routes>
            <Route path='/' element={ <Home/>}></Route>
            <Route path='/registration' element={ <Registration/>}></Route>
@@ -58,6 +59,7 @@ const App = () => {
            <Route path='/babyCare' element={ <PbabyCare/>}></Route>
         </Routes>
     </BrowserRouter>
+    </>
   )
 }
 

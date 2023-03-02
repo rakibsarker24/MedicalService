@@ -10,6 +10,7 @@ import { IoIosCall } from 'react-icons/io';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { BiTimeFive } from 'react-icons/bi';
 import { BiLocationPlus } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -36,12 +37,12 @@ const Footer = () => {
                         <h3>Category</h3>
                     </div>
                     <ul>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Leadership</a></li>
-                        <li><a href="">Career</a></li>
-                        <li><a href="">Partner</a></li>
+                        <li><Link to="/about">About Us</Link></li>
+                        <li><Link to="/about">Leadership</Link></li>
+                        <li><Link to="/about">Career</Link></li>
+                        <li><Link to="/about">Partner</Link></li>
                         {/* <li><a href="">Legal Notice</a></li> */}
-                        <li><a href="">News & Articel</a></li>
+                        <li><Link to="/blog">News & Articel</Link></li>
                     </ul>
                 </Col>
                 <Col lg='3' sm='6' md='6'>
@@ -49,12 +50,12 @@ const Footer = () => {
                         <h3>Support</h3>
                     </div>
                     <ul>
-                        <li><a href="">Apiontment</a></li>
-                        <li><a href="">Consultations</a></li>
-                        <li><a href="">Blood Donation</a></li>
-                        <li><a href="">Ambulance</a></li>
-                        <li><a href="">Diagnostic Tests</a></li>
-                        <li><a href="">Madical Equpments</a></li>
+                        <li><Link to="/appointment">Apiontment</Link></li>
+                        <li><Link to="/about">Consultations</Link></li>
+                        <li><Link to="/blood">Blood Donation</Link></li>
+                        <li><Link to="/ambulance">Ambulance</Link></li>
+                        <li><Link to="/about">Diagnostic Tests</Link></li>
+                        <li><Link to="/component">Madical Equpments</Link></li>
                     </ul>
                 </Col>
                 <Col lg='3' sm='6' md='6'>
