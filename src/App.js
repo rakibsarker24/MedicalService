@@ -26,6 +26,7 @@ import PmedicalComponent from './components/pages/PmedicalComponent'
 import PSafetyEquipment from './components/pages/PSafetyEquipment'
 import PbabyCare from './components/pages/PbabyCare'
 import Navber from './components/navber/Navber'
+import Admin from './components/Upload/Admin'
 
 const App = () => {
   return (
@@ -57,6 +58,7 @@ const App = () => {
            <Route path='/component' element={ <PmedicalComponent/>}></Route>
            <Route path='/equipment' element={ <PSafetyEquipment/>}></Route>
            <Route path='/babyCare' element={ <PbabyCare/>}></Route>
+           <Route path='/admin' element={ <Admin/>}></Route>
         </Routes>
     </BrowserRouter>
     </>
