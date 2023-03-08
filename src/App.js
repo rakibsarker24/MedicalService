@@ -26,7 +26,9 @@ import PmedicalComponent from './components/pages/PmedicalComponent'
 import PSafetyEquipment from './components/pages/PSafetyEquipment'
 import PbabyCare from './components/pages/PbabyCare'
 import Navber from './components/navber/Navber'
-import Admin from './components/Upload/Admin'
+// import Admin from './components/Upload/Admin'
+import PdonetBlood from './components/pages/PdonetBlood'
+import Admin from './components/admin/Admin'
 
 const App = () => {
   return (
@@ -49,6 +51,8 @@ const App = () => {
            <Route path='/ambulance' element={ <Ambulance/>}></Route>
            <Route path='/doner' element={ <Doner/>}></Route>
            <Route path='/pdoner' element={ <PDoner/>}></Route>
+           <Route path='/donetBlood' element={ <PdonetBlood/>}></Route>
+
            <Route path='/purchaseProduct' element={ <PPurchaseProduct/>}></Route>
            <Route path='/tablet' element={ <Ptablet/>}></Route>
            <Route path='/sirap' element={ <Psirap/>}></Route>

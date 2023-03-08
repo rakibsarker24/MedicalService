@@ -1,0 +1,144 @@
+#donerForm {
+	margin-bottom: 100px;
+	padding-top: 145px;
+}
+#donerForm .image img{
+    width: 100%;
+}
+
+#donerForm .image img{
+    width: 100%;
+    padding: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#donerForm .items{
+    margin-top:35px;
+}
+#donerForm .items p{
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    color:#494949;
+}
+#donerForm .items h2{
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    width: 650px;
+    color:#2abdf2;
+    text-align: left;
+}
+#donerForm .itemform{
+  margin-top: 30px;
+}
+
+#donerForm .form-check {
+    display: inline-block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: .125rem;
+    padding-right: 25px;
+}
+#donerForm .col-form-label {
+    padding-top: 0;
+}
+#donerForm .btn {
+	font-size: 15px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 800;
+	padding: 10px 15px;
+	border-radius: 25px;
+	transition: .4s;
+	-webkit-transition: .4s;
+	-moz-transition: .4s;
+	-ms-transition: .4s;
+	-o-transition: .4s;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	background-color: #2abdf2;
+    border: 1px solid #2abdf2 !important;
+}
+#donerForm  .btn:hover {
+    color: #2abdf2 !important;
+    background-color: #f7f7f7 !important;
+}
+#donerForm  label {
+    color: #333;
+    cursor: pointer;
+}
+.form-check-input:checked {
+	background-color: #2abdf2;
+	border-color: #2abdf2;
+}
+
+@media (min-width:320px) and (max-width:575px){
+    #donerForm .items h2 {
+        font-size: 23px;
+        width: 100%;
+    }
+    #donerForm .items p {
+        margin-bottom: 5px;
+    }
+    .form-control {
+        margin: 0 !important;
+    }
+    .form-select {
+        margin: 0 !important;
+    }
+    #donerForm .btn {
+        margin: 0 !important;
+        width: 100%;
+    }
+    #donerForm {
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px){
+    #donerForm .items h2 {
+        font-size: 27px;
+        width: 100%;
+    }
+    #donerForm .items p {
+        margin-bottom: 5px;
+    }
+    #donerForm {
+        margin-bottom: 60px;
+    }
+
+}
+@media (min-width:768px) and (max-width:991px){
+    #donerForm .items p {
+        padding-bottom: 10px;
+    }
+    #donerForm .items h2 {
+        font-size: 24px;
+        width: 100%;
+    }
+    #donerForm .image img {
+        margin-top: 41px;
+        height: 548px !important;
+    }
+    #donerForm {
+        margin-bottom: 70px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    #donerForm .items h2 {
+        font-size: 27px;
+        width: 100%;
+    }
+}
+@media (min-width:1200px) and (max-width:1399px){
+    #donerForm .items h2 {
+        font-size: 34px;
+        width: 100%;
+    }
+}

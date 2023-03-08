@@ -15,7 +15,7 @@ const Bslider=()=>{
                             <div className="bcontent">
                                 <span>Donet Blood to Save Blood</span>
                                 <p style={{width:"100%"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni iusto suscipit odio nisi dignissimos error. ipsum dolor sit amet consectetur adipisicing elit. Magni iusto suscipit odio nisi dignissimos error.</p>
-                                <Link to='/pdoner'>Donate Blood</Link>
+                                <Link to='/donetBlood'>Donate Now</Link>
                             </div>
                         </Col>
                         <Col lg='5' sm='5' md='5'>

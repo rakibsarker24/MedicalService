@@ -11,6 +11,7 @@ import { HiOutlineMailOpen } from 'react-icons/hi';
 import { BiTimeFive } from 'react-icons/bi';
 import { BiLocationPlus } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import Shop from './../pages/Shop';
 
 
 const Footer = () => {
@@ -52,10 +53,9 @@ const Footer = () => {
                     <ul>
                         <li><Link to="/appointment">Apiontment</Link></li>
                         <li><Link to="/about">Consultations</Link></li>
-                        <li><Link to="/blood">Blood Donation</Link></li>
+                        <li><Link to="/donetBlood">Blood Donation</Link></li>
                         <li><Link to="/ambulance">Ambulance</Link></li>
-                        <li><Link to="/about">Diagnostic Tests</Link></li>
-                        <li><Link to="/component">Madical Equpments</Link></li>
+                        <li><Link to="/shop">Madical Shop</Link></li>
                     </ul>
                 </Col>
                 <Col lg='3' sm='6' md='6'>

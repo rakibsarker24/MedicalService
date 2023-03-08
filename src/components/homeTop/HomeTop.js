@@ -13,7 +13,7 @@ const HomeTop = () => {
                     <div className="htcontent">
                         <h1>We Provide Remote Health Care Services</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus non, explicabo incidunt quam eum voluptatem quibusdam ut assumenda iste laudantium?</p>
-                        <NavLink to='/appointment' className='bone'>Get Start</NavLink>
+                        <NavLink to='/appointment' className='bone'>Get Appointment</NavLink>
                         <NavLink to='/shop' className='btwo'>Go To Shop</NavLink>
                     </div>
                 </Col>
