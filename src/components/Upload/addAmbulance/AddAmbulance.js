@@ -1,9 +1,9 @@
 import React from 'react'
+import '../addAmbulance/addAmbulance.css'
 import { Container,Row,Col,Button,Form,FloatingLabel  } from 'react-bootstrap'
-
 const AddAmbulance = () => {
   return (
-    <section id='adddoctor'>
+    <section id='addambulance'>
             <Container>
                 <Row>
                     <Col lg='12'>
