@@ -1,16 +1,16 @@
-
 import React from 'react'
-import '../addArtical/addArtical.css'
-import { Container,Row,Col,Button,Form,FloatingLabel  } from 'react-bootstrap'
+import '../addShopSlider/addShopSlider.css'
+import { Container,Row,Col,Button,Form,FloatingLabel } from 'react-bootstrap'
+import Slider from './../../slider/Slider';
 
-const AddArtical = () => {
+const AddShopSlider = () => {
   return (
-    <section id='addNewArtical'>
+    <section id='addShopSlider'>
             <Container>
                 <Row>
                     <Col lg='12'>
                         <div className="title">
-                            <h2>Add New Artical</h2>
+                            <h2>Add Shop Slider</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorem omnis iure enim totam voluptatem amet vel reprehenderit quia laudantium?</p>
                         </div>
                     </Col>
@@ -19,23 +19,18 @@ const AddArtical = () => {
                     <Col lg='6' xs='12' sm='12' md='8'>
                         <Form>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Artical Title</Form.Label>
-                                <Form.Control type="text" placeholder="artical title" />
+                                <Form.Label>Slider Title</Form.Label>
+                                <Form.Control type="text" placeholder="slider title" />
+                            </Form.Group>
+                            
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Slider Image</Form.Label>
+                                <Form.Control type="file" placeholder="slider image" />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Publisher Name</Form.Label>
-                                <Form.Control type="text" placeholder="publisher name" />
-                            </Form.Group>
-
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Image</Form.Label>
-                                <Form.Control type="file" placeholder="doctor details" />
-                            </Form.Group>
-
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Publish Date</Form.Label>
-                                <Form.Control type="date" />
+                                <Form.Label>Path (/path)</Form.Label>
+                                <Form.Control type="text" placeholder="path" />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -51,7 +46,7 @@ const AddArtical = () => {
                             
                            
                             <Button variant="primary" type="submit">
-                                Publish Artical
+                                Upload
                             </Button>
                         </Form>
                     </Col>
@@ -61,4 +56,4 @@ const AddArtical = () => {
   )
 }
 
-export default AddArtical
+export default AddShopSlider
