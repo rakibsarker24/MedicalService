@@ -34,7 +34,7 @@ const AddDoctor = () => {
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Details</Form.Label>
-                                <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                                <FloatingLabel controlId="floatingTextarea2" label="Details">
                                   <Form.Control
                                     as="textarea"
                                     placeholder="Leave a comment here"

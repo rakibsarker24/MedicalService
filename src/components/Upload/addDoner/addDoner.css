@@ -1,0 +1,15 @@
+#addDoner{
+    padding: 50px 0;
+}
+#addDoner .btn{
+        background: #3498db;
+        border-radius: 50px;
+        padding: 7px 15px;
+        border: none;
+        font-family: 'Comfortaa', cursive;
+        font-weight: 800;
+        color: #ffffff;
+    }
+#addDoner span{
+        color: #cc2c2c;
+}

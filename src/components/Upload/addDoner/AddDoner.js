@@ -1,14 +1,16 @@
 import React from 'react'
-import '../addAmbulance/addAmbulance.css'
+import '../addDoner/addDoner.css'
 import { Container,Row,Col,Button,Form,FloatingLabel  } from 'react-bootstrap'
-const AddAmbulance = () => {
+
+
+const AddDoner = () => {
   return (
-    <section id='addambulance'>
+    <section id='addDoner'>
             <Container>
                 <Row>
                     <Col lg='12'>
                         <div className="title">
-                            <h2>Add AddAmbulance</h2>
+                            <h2>Add Doner</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorem omnis iure enim totam voluptatem amet vel reprehenderit quia laudantium?</p>
                         </div>
                     </Col>
@@ -17,18 +19,36 @@ const AddAmbulance = () => {
                     <Col lg='6' xs='12' sm='12' md='8'>
                         <Form>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Ambulance Owner Name</Form.Label>
-                                <Form.Control type="text" placeholder="owner name" />
+                                <Form.Label>Doner Name</Form.Label>
+                                <Form.Control type="text" placeholder="doner name" />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Ambulance Owner Image</Form.Label>
+                                <Form.Label>Doner Image</Form.Label>
                                 <Form.Control type="file" placeholder="doctor details" />
                             </Form.Group>
+
+                            <Form.Label>Blood Group</Form.Label>
+                              <Form.Select defaultValue="Choose...">
+                                  <option>Choose...</option>
+                                  <option>A+</option>
+                                  <option>A-</option>
+                                  <option>B-</option>
+                                  <option>B+</option>
+                                  <option>AB-</option>
+                                  <option>AB+</option>
+                                  <option>O+</option>
+                                  <option>O-</option>
+                              </Form.Select>
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Contact Number</Form.Label>
                                 <Form.Control type="text" placeholder="contact number" />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label> Last Blood Donetion Date* <span>( if you donet )</span></Form.Label>
+                                <Form.Control type="date" />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -41,7 +61,6 @@ const AddAmbulance = () => {
                                   />
                                 </FloatingLabel>
                             </Form.Group>
-
                             
                             <Row className="mb-3">
                               <Form.Group as={Col} controlId="formGridState">
@@ -89,7 +108,7 @@ const AddAmbulance = () => {
 
                             
                             <Button variant="primary" type="submit">
-                                Add AddAmbulance
+                                Add Doner
                             </Button>
                         </Form>
                     </Col>
@@ -99,4 +118,4 @@ const AddAmbulance = () => {
   )
 }
 
-export default AddAmbulance
+export default AddDoner
