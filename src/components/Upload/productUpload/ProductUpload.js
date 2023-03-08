@@ -1,6 +1,6 @@
 import React from 'react'
 import '../productUpload/productUpload.css'
-import { Container,Row,Col,Button,Form } from 'react-bootstrap'
+import { Container,Row,Col,Button,Form,FloatingLabel } from 'react-bootstrap'
 
 const ProductUpload = () => {
   return (
@@ -45,7 +45,13 @@ const ProductUpload = () => {
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Product Details</Form.Label>
-                                <Form.Control type="text" placeholder="product details" />
+                                <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                                  <Form.Control
+                                    as="textarea"
+                                    placeholder="Leave a comment here"
+                                    style={{ height: '100px' }}
+                                  />
+                                </FloatingLabel>
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">

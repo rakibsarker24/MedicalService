@@ -1,6 +1,6 @@
 import React from 'react'
 import '../addDoctor/addDoctor.css'
-import { Container,Row,Col,Button,Form } from 'react-bootstrap'
+import { Container,Row,Col,Button,Form,FloatingLabel } from 'react-bootstrap'
 
 const AddDoctor = () => {
   return (
@@ -34,8 +34,15 @@ const AddDoctor = () => {
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Details</Form.Label>
-                                <Form.Control type="text" placeholder="details" />
+                                <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                                  <Form.Control
+                                    as="textarea"
+                                    placeholder="Leave a comment here"
+                                    style={{ height: '100px' }}
+                                  />
+                                </FloatingLabel>
                             </Form.Group>
+
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Appointment</Form.Label>
@@ -126,7 +133,6 @@ const AddDoctor = () => {
                                 <option>Sylhet</option>
                             </Form.Select>
                             </Form.Group>
-
 
                         </Row>
 
