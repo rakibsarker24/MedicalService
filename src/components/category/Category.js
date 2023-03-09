@@ -35,7 +35,7 @@ const Category = () => {
                         </NavLink>
                     </Col>
                     <Col lg='3' sm='6' md='4'>
-                        <NavLink to='/'>
+                        <NavLink to='/videoCall'>
                             <div className="card-content">
                                     <span><RiVideoChatFill/></span>
                                     <h3>Consultations</h3>

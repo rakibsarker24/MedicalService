@@ -29,6 +29,7 @@ import Navber from './components/navber/Navber'
 // import Admin from './components/Upload/Admin'
 import PdonetBlood from './components/pages/PdonetBlood'
 import Admin from './components/admin/Admin'
+import PvideoCall from './components/pages/PvideoCall'
 
 const App = () => {
   return (
@@ -63,6 +64,7 @@ const App = () => {
            <Route path='/equipment' element={ <PSafetyEquipment/>}></Route>
            <Route path='/babyCare' element={ <PbabyCare/>}></Route>
            <Route path='/admin' element={ <Admin/>}></Route>
+           <Route path='/videoCall' element={ <PvideoCall/>}></Route>
         </Routes>
     </BrowserRouter>
     </>

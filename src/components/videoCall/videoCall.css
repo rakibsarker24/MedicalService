@@ -1,0 +1,68 @@
+#videoCall{
+    padding-top: 150px;
+}
+#videoCall .call{
+    background: #333;
+    width: 100%;
+    height: 100%;
+}
+#videoCall .call{
+    background: #333;
+    width: 100%;
+    height: 94%;
+    position: relative;
+}
+#videoCall .call .icon {
+    position: absolute;
+    font-size: 80px;
+    top: 45%;
+    left: 50%;
+    text-align: center;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: #3498db;
+}
+#videoCall .call .icon:hover{
+    color: #ffffff;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+#videoCall span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 200;
+    padding-top: 0;
+}
+
+@media (min-width:320px) and (max-width:575px){
+    #videoCall .call .icon {
+        font-size: 30px;
+    }
+    #videoCall span {
+        font-size: 10px;
+    }
+    #videoCall .call {
+        height: 87%;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    
+}
+@media (min-width:768px) and (max-width:991px){
+
+}
+@media (min-width:992px) and (max-width:1199px){
+
+}
+@media (min-width:1200px) and (max-width:1399px){
+
+}
