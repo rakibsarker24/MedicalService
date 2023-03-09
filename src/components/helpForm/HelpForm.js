@@ -48,10 +48,51 @@ const HelpForm = () => {
 
                             <Row className="mb-3">
                                 <Form.Group as={Col} controlId="formGridState">
-                                <Form.Label>Select Department</Form.Label>
+                                <Form.Label>Division</Form.Label>
                                 <Form.Select defaultValue="Choose...">
                                     <option>Choose...</option>
                                     <option>...</option>
+                                    <option>Dhaka</option>
+                                    <option>Rangpur</option>
+                                    <option>Chattogram</option>
+                                </Form.Select>
+                                </Form.Group>
+
+                                <Form.Group as={Col} controlId="formGridCity">
+                                <Form.Label>District</Form.Label>
+                                <Form.Select defaultValue="Choose...">
+                                    <option>Choose...</option>
+                                    <option>Dhaka</option>
+                                    <option>Gazipur</option>
+                                    <option>Rangpur</option>
+                                    <option>Gaibandha</option>
+                                </Form.Select>
+                                </Form.Group>
+
+                                <Form.Group as={Col} controlId="formGridZip">
+                                <Form.Label>Upazila</Form.Label>
+                                <Form.Select defaultValue="Choose...">
+                                    <option>Choose...</option>
+                                    <option>Fulchari </option>
+                                    <option>Erendabari</option>
+                                    <option>Sadullapur</option>
+                                    <option>Kamrjani</option>
+                                    <option>Kholahati</option>
+                                    <option>Kuptola</option>
+                                </Form.Select>
+                                </Form.Group>
+                            </Row>
+
+                            <Row className="mb-3">
+                                <Form.Group as={Col} controlId="formGridState">
+                                <Form.Label>Select Department</Form.Label>
+                                <Form.Select defaultValue="Choose...">
+                                    <option>Choose...</option>
+                                    <option>Dermatologists</option>
+                                    <option>Endocrinologists</option>
+                                    <option>Anesthesiologists</option>
+                                    <option>Cardiologists</option>
+                                    <option>Rectal Surgeons</option>
                                 </Form.Select>
                                 </Form.Group>
 
@@ -59,32 +100,14 @@ const HelpForm = () => {
                                 <Form.Label>Select Doctor</Form.Label>
                                 <Form.Select defaultValue="Choose...">
                                     <option>Choose...</option>
-                                    <option>...</option>
+                                    <option>Dr. Amir Hosen</option>
+                                    <option>Dr. Bethi Khatun</option>
+                                    <option>Dr. Sajjad Hosen</option>
+                                    <option>Dr. Sujon Mia</option>
                                 </Form.Select>
                                 </Form.Group>
                             </Row>
-                            <Row className="mb-3">
-                                <Form.Group as={Col} controlId="formGridState">
-                                <Form.Label>State</Form.Label>
-                                <Form.Select defaultValue="Choose...">
-                                    <option>Bangladesh</option>
-                                    <option>India</option>
-                                    <option>Pakisthan</option>
-                                    <option>Choose...</option>
-                                    <option>...</option>
-                                </Form.Select>
-                                </Form.Group>
-
-                                <Form.Group as={Col} controlId="formGridCity">
-                                <Form.Label>City</Form.Label>
-                                <Form.Control />
-                                </Form.Group>
-
-                                <Form.Group as={Col} controlId="formGridZip">
-                                <Form.Label>Zip</Form.Label>
-                                <Form.Control />
-                                </Form.Group>
-                            </Row>
+                            
                             <fieldset>
                                 <Form.Group as={Row} className="mb-3">
                                 <Form.Label as="legend" column sm={2}>

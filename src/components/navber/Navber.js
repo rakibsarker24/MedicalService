@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../navber/navber.css'
-import {Container, Row,Col,Nav,Navbar,NavDropdown,Offcanvas} from 'react-bootstrap';
+import {Container, Row,Col,Nav,Navbar,NavDropdown,Offcanvas,Button} from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
 import { MdAccountCircle } from 'react-icons/md';
 import { NavLink,Link, useNavigate } from 'react-router-dom';
@@ -8,6 +8,7 @@ import { IoIosCall } from 'react-icons/io';
 import { MdEmail } from 'react-icons/md';
 import { FaFacebookMessenger } from 'react-icons/fa';
 import { BsFacebook } from 'react-icons/bs';
+import PurchaseProduct from '../purchaseProduct/PurchaseProduct';
 
 const Navber = () => {
 
@@ -70,17 +71,20 @@ const Navber = () => {
                   </Nav>
 
                 <div className='navIcons flex'>
-                    <Link variant="primary" onClick={handleShow} ><FaShoppingCart className='nicon'/>
-                      <Offcanvas show={show} onHide={handleClose}>
-                          <Offcanvas.Header closeButton>
-                          <Offcanvas.Title>All Cards</Offcanvas.Title>
-                          </Offcanvas.Header>
-                          <Offcanvas.Body>
-                          Some text as placeholder. In real life you can have the elements you
-                          have chosen. Like, text, images, lists, etc.
-                          </Offcanvas.Body>
-                      </Offcanvas>
-                    </Link>
+                        {/* //Offcanvas */}
+                        <Link variant="primary" onClick={handleShow}>
+                          {/* cart icon */}
+                            <FaShoppingCart className='nicon'/> 
+                        </Link>
+                        <Offcanvas show={show} onHide={handleClose}>
+                            <Offcanvas.Header closeButton>
+                            <Offcanvas.Title>All Cards</Offcanvas.Title>
+                            </Offcanvas.Header>
+                            <Offcanvas.Body>
+                                <PurchaseProduct/>
+                            </Offcanvas.Body>
+                        </Offcanvas>
+
                     <div className="numcart">
                       <p>0</p>
                     </div>
