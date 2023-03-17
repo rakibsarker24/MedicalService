@@ -22,6 +22,22 @@ const AddDoner = () => {
                                 <Form.Label>Doner Name</Form.Label>
                                 <Form.Control type="text" placeholder="doner name" />
                             </Form.Group>
+                            <Row className="mb-3">
+                              <Form.Group as={Col} controlId="formGridState">
+                              <Form.Label>Gender</Form.Label>
+                              <Form.Select defaultValue="Choose...">
+                                  <option>Choose...</option>
+                                  <option>Male</option>
+                                  <option>Female</option>
+                              </Form.Select>
+                              </Form.Group>
+
+                              <Form.Group as={Col} controlId="formGridState">
+                              <Form.Label>Age</Form.Label>
+                              <Form.Control type="number" placeholder="age" />
+                              </Form.Group>
+                        
+                        </Row>
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Doner Image</Form.Label>
