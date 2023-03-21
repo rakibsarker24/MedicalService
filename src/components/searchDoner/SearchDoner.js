@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container,Row,Col,Form,Button } from 'react-bootstrap'
 import '../searchDoner/searchDoner.css'
+import DonerCard from '../donerCard/DonerCard'
 
 const SearchDoner = () => {
   return (
@@ -66,8 +67,12 @@ const SearchDoner = () => {
                     <div className=" text-center mt-4">
                             <Button className='btn btn-primary'>Search Doner</Button>
                     </div>
+
                 </Col>
             </Row>
+                    <div className="">
+                        <DonerCard/>
+                    </div>
         </Container>
     </section>
   )

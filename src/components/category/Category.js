@@ -53,7 +53,7 @@ const Category = () => {
                         </NavLink>
                     </Col>
                     <Col lg='3' sm='6' md='4'>
-                        <NavLink to='/blood' >
+                        <NavLink to='/donetBlood' >
                             <div className="card-content">
                                     <span><BiDonateBlood/></span>
                                     <h3>Blood Donation</h3>
@@ -61,11 +61,22 @@ const Category = () => {
                              </div>
                         </NavLink>
                     </Col>
+                    
                     <Col lg='3' sm='6' md='4'>
-                        <NavLink to='/'>
+                        <NavLink to='/component'>
+                            <div className="card-content">
+                                    <span><MdAddShoppingCart/></span>
+                                    <h3>Madical Equpments</h3>
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p> 
+                             </div>
+                        </NavLink>
+                    </Col>
+
+                    <Col lg='3' sm='6' md='4'>
+                        <NavLink to='/shop'>
                             <div className="card-content">
                                     <span><FaClinicMedical/></span>
-                                    <h3>Diagnostic Tests</h3>
+                                    <h3>Shop</h3>
                                     <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p> 
                              </div>
                         </NavLink>
@@ -74,20 +85,12 @@ const Category = () => {
                         <NavLink to='/'>
                             <div className="card-content">
                                     <span><FaDonate/></span>
-                                    <h3>Donation</h3>
+                                    <h3>Blog</h3>
                                     <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p> 
                              </div>
                         </NavLink>
                     </Col>
-                    <Col lg='3' sm='6' md='4'>
-                        <NavLink to='/shop'>
-                            <div className="card-content">
-                                    <span><MdAddShoppingCart/></span>
-                                    <h3>Madical Equpments</h3>
-                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p> 
-                             </div>
-                        </NavLink>
-                    </Col>
+
                     <Col lg='3' sm='6' md='4'>
                         <NavLink to='/about'>
                             <div className="card-content">

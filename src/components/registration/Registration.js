@@ -21,6 +21,9 @@ const Registration = () => {
     let [cpassword,setCpassword]= useState("")
     let [errcpassword,setErrCpassword]= useState("")
 
+    let[address,setAddress] = useState("")
+    let[erraddress,setErrAddress] = useState("")
+
 
 
     let handleSubmit=(e)=>{
@@ -33,6 +36,14 @@ const Registration = () => {
         }else{
             if(name.length<=2){
                 setErrName("name must be grater than 2")
+            }
+        }
+        // address
+        if(!address){
+            setErrAddress("enter your address")
+        }else{
+            if(address.length<=3){
+                setErrAddress("name must be grater than 3")
             }
         }
 
@@ -105,6 +116,18 @@ const Registration = () => {
                               {erremail?
                                      <Form.Text className="text-muted red">
                                          {erremail}
+                                    </Form.Text> 
+                                    :
+                                    ""
+                                    }
+                          </Form.Group>
+
+                          <Form.Group className="mb-3" controlId="formBasicEmail">
+                              <Form.Label>Your Address</Form.Label>
+                              <Form.Control type="email" placeholder="enter address" value={address} onChange={(e)=>{setAddress(e.target.value)}}/>
+                              {erraddress?
+                                     <Form.Text className="text-muted red">
+                                         {erraddress}
                                     </Form.Text> 
                                     :
                                     ""

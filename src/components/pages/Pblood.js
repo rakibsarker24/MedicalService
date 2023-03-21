@@ -13,7 +13,7 @@ const Pblood = () => {
         <Navber/>
         <Bslider/>
         <SearchDoner/>
-        <Bcart/>
+        {/* <Bcart/> */}
         <Footer/>
     </>
   )

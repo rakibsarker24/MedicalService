@@ -62,7 +62,7 @@ const Navber = () => {
                         <NavLink to="/appointment">Appointment</NavLink>
                         <NavLink to="/blood">Blood Bank</NavLink>
                         <NavLink to="/ambulance">Ambulance</NavLink>
-                        <NavLink to="/donation">Donation</NavLink>
+                        {/* <NavLink to="/donation">Donation</NavLink> */}
                         <NavDropdown.Divider />
                     </NavDropdown>
                         <NavLink to="/shop">Shop</NavLink>

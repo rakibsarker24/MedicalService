@@ -1,6 +1,6 @@
 import React from 'react'
 import '../helpForm/helpform.css'
-import { Container,Row,Col,Form ,Button } from 'react-bootstrap'
+import { Container,Row,Col,Form ,Button,FloatingLabel } from 'react-bootstrap'
 import { TbPlayerPlay } from 'react-icons/tb';
 
 
@@ -135,7 +135,16 @@ const HelpForm = () => {
                                 </Col>
                                 </Form.Group>
                             </fieldset>
-                            <Button variant="primary" type="submit">
+
+                            <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                                <Form.Control
+                                as="textarea"
+                                placeholder="Leave a comment here"
+                                style={{ height: '100px' }}
+                                />
+                            </FloatingLabel>
+
+                            <Button className='mt-3' variant="primary" type="submit">
                                 Create Appointment
                             </Button>
                         </Form>
