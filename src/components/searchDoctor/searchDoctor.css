@@ -2,3 +2,8 @@
     padding-top: 150px !important;
     padding-bottom: 80px;
 }
+#searchDoctor .btn{
+    background: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 25px;
+}

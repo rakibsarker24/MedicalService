@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../login/login.css'
-import { Container,Row,Col,Button,Form,Alert } from 'react-bootstrap'
+import { Container,Row,Col,Button,Form,Alert,Modal} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import NavTop from '../navTop/NavTop'
 import Navber from '../navber/Navber'
@@ -13,7 +13,16 @@ const Login = () => {
     
     let [password,setPassword]= useState("")
     let [errpassword,setErrPassword]= useState("")
+    let [reset,setReset] = useState("")
+    const [sshow, setSshow] = useState(false);
 
+    const [show, setShow] = useState(false);
+    const handleClose = () =>{
+        setSshow(true)
+        setShow(false)};
+    const handleShow = () => setShow(true);
+
+    const handleCllose = () => setSshow(false);
 
 
     let handleSubmit=(e)=>{
@@ -34,6 +43,8 @@ const Login = () => {
         }
     
     }
+
+
 
   return (
     <>
@@ -75,8 +86,57 @@ const Login = () => {
                                 Submit
                             </Button>
                             <p className='text-center'>Have not Account? <Link to={'/registration'}>Registration</Link></p>
+                            <p className='text-center forget' >Forget Password?<span className='reset' onClick={handleShow}> Reset</span></p>
+
+
                         </Form>
                     </Col>
+                            <div className="modaltop">
+                                <Modal className='mt-5' show={show} onHide={handleClose}>
+                                    <Modal.Header closeButton>
+                                    <Modal.Title>Email Here</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                        <Form.Label>Email address</Form.Label>
+                                        <Form.Control type="email" placeholder="Enter email" />
+                                           
+                                    </Form.Group>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                    <Button variant="primary" onClick={handleClose} >
+                                        Sent Email
+                                    </Button>
+                                    </Modal.Footer>
+                                </Modal>
+                            </div>
+
+                            {/* klhkjgg */}
+                            <Modal className='mt-5' show={sshow} onHide={handleCllose}>
+                                <Modal.Header closeButton>
+                                <Modal.Title>Set New Password</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                            <Form.Label>Code</Form.Label>
+                                            <Form.Control type="text" placeholder="enter code" />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                            <Form.Label>New Password</Form.Label>
+                                            <Form.Control type="password" placeholder="Enter new password" />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                            <Form.Label>Confrim New Password</Form.Label>
+                                            <Form.Control type="password" placeholder="Enter confrim new password" />
+                                    </Form.Group>
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    
+                                <Button variant="primary" onClick={handleCllose}>
+                                    Save Changes
+                                </Button>
+                                </Modal.Footer>
+                            </Modal>
                 </Row>
             </Container>
         </section>

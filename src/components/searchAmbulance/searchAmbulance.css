@@ -3,4 +3,8 @@
     padding-bottom: 80px;
     background-color: rgba(163, 163, 163, 0.112);
 }
-
+#searchAmbulance .btn{
+    background: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 25px;
+}

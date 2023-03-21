@@ -32,3 +32,24 @@
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
 }
+#login  .reset {
+    background-color:rgb(240, 8, 8) !important;
+    color:white;
+    font-family: 'Comfortaa', cursive;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 400;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#login  .forget {
+    font-family: 'Comfortaa', cursive;
+}
+#login .modaltop {
+    font-family: 'Comfortaa', cursive;
+    margin-top: 105px !important;
+}

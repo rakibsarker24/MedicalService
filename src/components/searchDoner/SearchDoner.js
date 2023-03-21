@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container,Row,Col,Form } from 'react-bootstrap'
+import { Container,Row,Col,Form,Button } from 'react-bootstrap'
 import '../searchDoner/searchDoner.css'
 
 const SearchDoner = () => {
@@ -62,6 +62,9 @@ const SearchDoner = () => {
                             </Form.Group>
 
                         </Row>
+                    </div>
+                    <div className=" text-center mt-4">
+                            <Button className='btn btn-primary'>Search Doner</Button>
                     </div>
                 </Col>
             </Row>
