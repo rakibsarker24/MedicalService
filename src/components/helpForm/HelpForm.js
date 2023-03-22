@@ -1,159 +1,272 @@
-import React from 'react'
-import '../helpForm/helpform.css'
-import { Container,Row,Col,Form ,Button,FloatingLabel } from 'react-bootstrap'
-import { TbPlayerPlay } from 'react-icons/tb';
+import React, { useEffect, useState } from "react";
+import "../helpForm/helpform.css";
+import {
+  Container,
+  Row,
+  Col,
+  Form,
+  Button,
+  FloatingLabel,
+} from "react-bootstrap";
+import { TbPlayerPlay } from "react-icons/tb";
+import { route } from "../../config";
 
-
-
+const initialInputs = {};
 
 const HelpForm = () => {
+  const [inputs, setInputs] = useState(initialInputs);
+  const [doctors, setDoctors] = useState([]);
+  const handelChange = (name, value) => {
+    setInputs((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  useEffect(() => {
+    async function fetchDoctor() {
+      try {
+        const response = await route?.get("doctors?page=1");
+        console.log(response, "response");
+        setDoctors(response?.data?.rows);
+      } catch (error) {
+        console.log(error, "error");
+      }
+    }
+    fetchDoctor();
+  }, []);
+  const handelSubmit = async (e) => {
+    e.preventDefault();
+    console.log(inputs, "inputs");
+    if (!Object.keys(inputs)?.length) {
+      return;
+    }
+    try {
+      const response = await route?.post("appointments", inputs);
+      setInputs(initialInputs);
+      console.log(response, "response");
+    } catch (error) {
+      console.log(error, "error");
+    }
+  };
   return (
-    <section id='helpForm'>
-        <Container>
-            <Row>
-                <Col lg='6'>
-                    <div className="image">
-                        <img src="images/re.jpg" alt="images" />
-                    </div>
-                </Col>
-                <Col lg='6'>
-                    <div className="items">
-                        <p>Make in Appointment</p>
-                        <h2>Contact us for any medical help and fill out an appointment form.</h2>
-                    </div>
-                    <div className="itemform">
-                        <Form>
-                            <Row className="mb-3">
-                                <Form.Group as={Col} controlId="formGridEmail">
-                                <Form.Label>Full Name</Form.Label>
-                                <Form.Control type="text" placeholder="full name" />
-                                </Form.Group>
-                                
-                                <Form.Group as={Col} controlId="formGridEmail">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" />
-                                </Form.Group>
-                            </Row>
-                            <Row className="mb-3">
-                                <Form.Group as={Col} controlId="formGridEmail">
-                                <Form.Label> Age</Form.Label>
-                                <Form.Control type="text" placeholder="age" />
-                                </Form.Group>
-                                
-                                <Form.Group as={Col} controlId="formGridEmail">
-                                <Form.Label>Phone Number</Form.Label>
-                                <Form.Control type="text" placeholder='phone number' />
-                                </Form.Group>
-                            </Row>
+    <section id="helpForm">
+      <Container>
+        <Row>
+          <Col lg="6">
+            <div className="image">
+              <img src="images/re.jpg" alt="images" />
+            </div>
+          </Col>
+          <Col lg="6">
+            <div className="items">
+              <p>Make in Appointment</p>
+              <h2>
+                Contact us for any medical help and fill out an appointment
+                form.
+              </h2>
+            </div>
+            <div className="itemform">
+              <Form onSubmit={handelSubmit} method="post">
+                <Row className="mb-3">
+                  <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="full name"
+                      name="fullName"
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
+                    />
+                  </Form.Group>
 
-                            <Row className="mb-3">
-                                <Form.Group as={Col} controlId="formGridState">
-                                <Form.Label>Division</Form.Label>
-                                <Form.Select defaultValue="Choose...">
-                                    <option>Choose...</option>
-                                    <option>...</option>
-                                    <option>Dhaka</option>
-                                    <option>Rangpur</option>
-                                    <option>Chattogram</option>
-                                </Form.Select>
-                                </Form.Group>
+                  <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control
+                      type="email"
+                      placeholder="Enter email"
+                      name="email"
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
+                    />
+                  </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                  <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Label> Age</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="age"
+                      name="age"
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
+                    />
+                  </Form.Group>
 
-                                <Form.Group as={Col} controlId="formGridCity">
-                                <Form.Label>District</Form.Label>
-                                <Form.Select defaultValue="Choose...">
-                                    <option>Choose...</option>
-                                    <option>Dhaka</option>
-                                    <option>Gazipur</option>
-                                    <option>Rangpur</option>
-                                    <option>Gaibandha</option>
-                                </Form.Select>
-                                </Form.Group>
+                  <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Label>Phone Number</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="phone number"
+                      name="contactNumber"
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
+                    />
+                  </Form.Group>
+                </Row>
 
-                                <Form.Group as={Col} controlId="formGridZip">
-                                <Form.Label>Upazila</Form.Label>
-                                <Form.Select defaultValue="Choose...">
-                                    <option>Choose...</option>
-                                    <option>Fulchari </option>
-                                    <option>Erendabari</option>
-                                    <option>Sadullapur</option>
-                                    <option>Kamrjani</option>
-                                    <option>Kholahati</option>
-                                    <option>Kuptola</option>
-                                </Form.Select>
-                                </Form.Group>
-                            </Row>
+                <Row className="mb-3">
+                  <Form.Group as={Col} controlId="formGridState">
+                    <Form.Label>Division</Form.Label>
+                    <Form.Select
+                      defaultValue="Choose..."
+                      name="division"
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
+                    >
+                      <option>Choose...</option>
+                      <option value="Dhaka">Dhaka</option>
+                      <option value="Rangpur">Rangpur</option>
+                      <option value="Chattogram">Chattogram</option>
+                    </Form.Select>
+                  </Form.Group>
 
-                            <Row className="mb-3">
-                                <Form.Group as={Col} controlId="formGridState">
-                                <Form.Label>Select Department</Form.Label>
-                                <Form.Select defaultValue="Choose...">
-                                    <option>Choose...</option>
-                                    <option>Dermatologists</option>
-                                    <option>Endocrinologists</option>
-                                    <option>Anesthesiologists</option>
-                                    <option>Cardiologists</option>
-                                    <option>Rectal Surgeons</option>
-                                </Form.Select>
-                                </Form.Group>
+                  <Form.Group as={Col} controlId="formGridCity">
+                    <Form.Label>District</Form.Label>
+                    <Form.Select
+                      defaultValue="Choose..."
+                      name="district"
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
+                    >
+                      <option>Choose...</option>
+                      <option value="Dhaka">Dhaka</option>
+                      <option value="Gazipur">Gazipur</option>
+                      <option value="Rangpur">Rangpur</option>
+                      <option value="Gaibandha">Gaibandha</option>
+                    </Form.Select>
+                  </Form.Group>
 
-                                <Form.Group as={Col} controlId="formGridState">
-                                <Form.Label>Select Doctor</Form.Label>
-                                <Form.Select defaultValue="Choose...">
-                                    <option>Choose...</option>
-                                    <option>Dr. Amir Hosen</option>
-                                    <option>Dr. Bethi Khatun</option>
-                                    <option>Dr. Sajjad Hosen</option>
-                                    <option>Dr. Sujon Mia</option>
-                                </Form.Select>
-                                </Form.Group>
-                            </Row>
-                            
-                            <fieldset>
-                                <Form.Group as={Row} className="mb-3">
-                                <Form.Label as="legend" column sm={2}>
-                                    Gender
-                                </Form.Label>
-                                <Col sm={10}>
-                                    <Form.Check
-                                    type="radio"
-                                    label="Male"
-                                    name="formHorizontalRadios"
-                                    id="formHorizontalRadios1"
-                                    />
-                                    <Form.Check
-                                    type="radio"
-                                    label="Female"
-                                    name="formHorizontalRadios"
-                                    id="formHorizontalRadios2"
-                                    />
-                                    <Form.Check
-                                    type="radio"
-                                    label="Others"
-                                    name="formHorizontalRadios"
-                                    id="formHorizontalRadios3"
-                                    />
-                                </Col>
-                                </Form.Group>
-                            </fieldset>
+                  <Form.Group as={Col} controlId="formGridZip">
+                    <Form.Label>Upazila</Form.Label>
+                    <Form.Select
+                      defaultValue="Choose..."
+                      name="upazila"
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
+                    >
+                      <option>Choose...</option>
+                      <option value="Fulchari">Fulchari </option>
+                      <option value="Erendabari">Erendabari</option>
+                      <option value="Sadullapur">Sadullapur</option>
+                      <option value="Kamrjani">Kamrjani</option>
+                      <option value="Kholahati">Kholahati</option>
+                      <option value="Kuptola">Kuptola</option>
+                    </Form.Select>
+                  </Form.Group>
+                </Row>
 
-                            <FloatingLabel controlId="floatingTextarea2" label="Comments">
-                                <Form.Control
-                                as="textarea"
-                                placeholder="Leave a comment here"
-                                style={{ height: '100px' }}
-                                />
-                            </FloatingLabel>
+                <Row className="mb-3">
+                  <Form.Group as={Col} controlId="formGridState">
+                    <Form.Label>Select Department</Form.Label>
+                    <Form.Select
+                      defaultValue="Choose..."
+                      name="department"
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
+                    >
+                      <option>Choose...</option>
+                      <option value="Dermatologists">Dermatologists</option>
+                      <option value="Endocrinologists">Endocrinologists</option>
+                      <option value="Anesthesiologists">
+                        Anesthesiologists
+                      </option>
+                      <option value="Cardiologists">Cardiologists</option>
+                      <option value="Rectal Surgeons">Rectal Surgeons</option>
+                    </Form.Select>
+                  </Form.Group>
 
-                            <Button className='mt-3' variant="primary" type="submit">
-                                Create Appointment
-                            </Button>
-                        </Form>
-                    </div>
-                </Col>
-            </Row>
-        </Container>
+                  <Form.Group as={Col} controlId="formGridState">
+                    <Form.Label>Select Doctor</Form.Label>
+                    <Form.Select
+                      defaultValue="Choose..."
+                      name="doctorId"
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
+                    >
+                      <option>Choose...</option>
+                      {doctors &&
+                        doctors?.map((doctor) => (
+                          <option value={doctor?.id}>{doctor?.fullName}</option>
+                        ))}
+                    </Form.Select>
+                  </Form.Group>
+                </Row>
+
+                <fieldset>
+                  <Form.Group as={Row} className="mb-3">
+                    <Form.Label as="legend" column sm={2}>
+                      Gender
+                    </Form.Label>
+                    <Col sm={10}>
+                      <Form.Check
+                        onChange={({ target }) =>
+                          handelChange(target?.name, target?.value)
+                        }
+                        value="Male"
+                        type="radio"
+                        label="Male"
+                        name="gender"
+                        id="formHorizontalRadios1"
+                      />
+                      <Form.Check
+                        type="radio"
+                        label="Female"
+                        value="Female"
+                        name="gender"
+                        id="formHorizontalRadios2"
+                        onChange={({ target }) =>
+                          handelChange(target?.name, target?.value)
+                        }
+                      />
+                      <Form.Check
+                        type="radio"
+                        label="Others"
+                        value="Other"
+                        name="gender"
+                        id="formHorizontalRadios3"
+                        onChange={({ target }) =>
+                          handelChange(target?.name, target?.value)
+                        }
+                      />
+                    </Col>
+                  </Form.Group>
+                </fieldset>
+
+                <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                  <Form.Control
+                    as="textarea"
+                    placeholder="Leave a comment here"
+                    style={{ height: "100px" }}
+                  />
+                </FloatingLabel>
+
+                <Button className="mt-3" variant="primary" type="submit">
+                  Create Appointment
+                </Button>
+              </Form>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
-  )
-}
+  );
+};
 
-export default HelpForm
+export default HelpForm;
