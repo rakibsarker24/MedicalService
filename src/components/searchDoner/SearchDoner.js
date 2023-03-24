@@ -3,21 +3,57 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "../searchDoner/searchDoner.css";
 import DonerCard from "../donerCard/DonerCard";
 import { route } from "../../config";
+import divisions from "../../_data/bd-divisions.json";
+import districts from "../../_data/bd-districts.json";
+import upazilas from "../../_data/bd-upazilas.json";
+
+const initialState = {
+  division: "",
+  district: "",
+  upazila: "",
+};
 
 const SearchDoner = () => {
   const [donors, setDonors] = useState([]);
+  const [inputs, setInputs] = useState(initialState);
+  const [filters, setFilters] = useState({});
+
+  const handelChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setInputs((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   useEffect(() => {
-    async function fetchDoctor() {
+    let queryParams = new URLSearchParams();
+
+    if (Object.keys(filters)?.length) {
+      Object.keys(filters).forEach((filter) => {
+        if (filters[filter] !== "") {
+          queryParams.append(filter, filters[filter]);
+        }
+      });
+    }
+
+    async function fetchData() {
       try {
-        const response = await route?.get("blooddonors?page=1");
+        const response = await route?.get(`blooddonors?page=1&${queryParams}`);
+
         console.log(response, "response");
         setDonors(response?.data?.rows);
       } catch (error) {
         console.log(error, "error");
       }
     }
-    fetchDoctor();
-  }, []);
+    fetchData();
+  }, [filters]);
+
+  const handelSearch = () => {
+    setFilters(inputs);
+  };
 
   return (
     <section id="searchDoner">
@@ -41,49 +77,66 @@ const SearchDoner = () => {
               <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridState">
                   <Form.Label>Division</Form.Label>
-                  <Form.Select defaultValue="Choose...">
+                  <Form.Select
+                    defaultValue=""
+                    name="division"
+                    onChange={handelChange}
+                  >
                     <option>Choose...</option>
-                    <option>Barishal</option>
-                    <option>Chattogram</option>
-                    <option>Dhaka</option>
-                    <option>Rajshahi</option>
-                    <option>Rangpur</option>
-                    <option>Mymensingh </option>
-                    <option>Sylhet</option>
+                    {divisions &&
+                      divisions?.map((division) => (
+                        <option value={division?.id}>{division?.name}</option>
+                      ))}
                   </Form.Select>
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridState">
                   <Form.Label>District</Form.Label>
-                  <Form.Select defaultValue="Choose...">
+                  <Form.Select
+                    defaultValue=""
+                    name="district"
+                    onChange={handelChange}
+                  >
                     <option>Choose...</option>
-                    <option>Barishal</option>
-                    <option>Chattogram</option>
-                    <option>Dhaka</option>
-                    <option>Rajshahi</option>
-                    <option>Rangpur</option>
-                    <option>Mymensingh </option>
-                    <option>Sylhet</option>
+                    {districts &&
+                      districts
+                        ?.filter(
+                          (district) =>
+                            district?.division_id === inputs?.division
+                        )
+                        .map((district) => (
+                          <option value={district?.id}>{district?.name}</option>
+                        ))}
                   </Form.Select>
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridState">
                   <Form.Label>Upazila</Form.Label>
-                  <Form.Select defaultValue="Choose...">
+                  <Form.Select
+                    defaultValue=""
+                    name="upazila"
+                    onChange={handelChange}
+                  >
                     <option>Choose...</option>
-                    <option>Barishal</option>
-                    <option>Chattogram</option>
-                    <option>Dhaka</option>
-                    <option>Rajshahi</option>
-                    <option>Rangpur</option>
-                    <option>Mymensingh </option>
-                    <option>Sylhet</option>
+                    {upazilas &&
+                      upazilas
+                        ?.filter(
+                          (upazila) => upazila?.district_id === inputs?.district
+                        )
+                        .map((upazila) => (
+                          <option value={upazila?.id}>{upazila?.name}</option>
+                        ))}
                   </Form.Select>
                 </Form.Group>
               </Row>
             </div>
             <div className=" text-center mt-4">
-              <Button className="btn btn-primary">Search Doner</Button>
+              <Button
+                onClick={() => handelSearch(inputs)}
+                className="btn btn-primary"
+              >
+                Search Doner
+              </Button>
             </div>
           </Col>
         </Row>

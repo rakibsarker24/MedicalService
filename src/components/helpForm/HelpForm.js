@@ -10,6 +10,9 @@ import {
 } from "react-bootstrap";
 import { TbPlayerPlay } from "react-icons/tb";
 import { route } from "../../config";
+import divisions from "../../_data/bd-divisions.json";
+import districts from "../../_data/bd-districts.json";
+import upazilas from "../../_data/bd-upazilas.json";
 
 const initialInputs = {};
 
@@ -120,52 +123,57 @@ const HelpForm = () => {
                   <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>Division</Form.Label>
                     <Form.Select
-                      defaultValue="Choose..."
+                      defaultValue=""
                       name="division"
-                      onChange={({ target }) =>
-                        handelChange(target?.name, target?.value)
-                      }
+                      onChange={handelChange}
                     >
                       <option>Choose...</option>
-                      <option value="Dhaka">Dhaka</option>
-                      <option value="Rangpur">Rangpur</option>
-                      <option value="Chattogram">Chattogram</option>
+                      {divisions &&
+                        divisions?.map((division) => (
+                          <option value={division?.id}>{division?.name}</option>
+                        ))}
                     </Form.Select>
                   </Form.Group>
 
-                  <Form.Group as={Col} controlId="formGridCity">
+                  <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>District</Form.Label>
                     <Form.Select
-                      defaultValue="Choose..."
+                      defaultValue=""
                       name="district"
-                      onChange={({ target }) =>
-                        handelChange(target?.name, target?.value)
-                      }
+                      onChange={handelChange}
                     >
                       <option>Choose...</option>
-                      <option value="Dhaka">Dhaka</option>
-                      <option value="Gazipur">Gazipur</option>
-                      <option value="Rangpur">Rangpur</option>
-                      <option value="Gaibandha">Gaibandha</option>
+                      {districts &&
+                        districts
+                          ?.filter(
+                            (district) =>
+                              district?.division_id === inputs?.division
+                          )
+                          .map((district) => (
+                            <option value={district?.id}>
+                              {district?.name}
+                            </option>
+                          ))}
                     </Form.Select>
                   </Form.Group>
 
-                  <Form.Group as={Col} controlId="formGridZip">
+                  <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>Upazila</Form.Label>
                     <Form.Select
-                      defaultValue="Choose..."
+                      defaultValue=""
                       name="upazila"
-                      onChange={({ target }) =>
-                        handelChange(target?.name, target?.value)
-                      }
+                      onChange={handelChange}
                     >
                       <option>Choose...</option>
-                      <option value="Fulchari">Fulchari </option>
-                      <option value="Erendabari">Erendabari</option>
-                      <option value="Sadullapur">Sadullapur</option>
-                      <option value="Kamrjani">Kamrjani</option>
-                      <option value="Kholahati">Kholahati</option>
-                      <option value="Kuptola">Kuptola</option>
+                      {upazilas &&
+                        upazilas
+                          ?.filter(
+                            (upazila) =>
+                              upazila?.district_id === inputs?.district
+                          )
+                          .map((upazila) => (
+                            <option value={upazila?.id}>{upazila?.name}</option>
+                          ))}
                     </Form.Select>
                   </Form.Group>
                 </Row>

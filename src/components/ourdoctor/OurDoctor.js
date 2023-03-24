@@ -7,20 +7,7 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import { IMAGE_URL, route } from "../../config";
 
-const OurDoctor = () => {
-  const [doctors, setDoctors] = useState([]);
-  useEffect(() => {
-    async function fetchDoctor() {
-      try {
-        const response = await route?.get("doctors?page=1");
-        console.log(response, "response");
-        setDoctors(response?.data?.rows);
-      } catch (error) {
-        console.log(error, "error");
-      }
-    }
-    fetchDoctor();
-  }, []);
+const OurDoctor = ({ items }) => {
   return (
     <section id="ourdoctor">
       <Container>
@@ -37,11 +24,14 @@ const OurDoctor = () => {
           </Col>
         </Row>
         <Row>
-          {doctors &&
-            doctors?.map((doctor) => (
+          {items &&
+            items?.map((doctor) => (
               <Col lg="3" className="mb-4" sm="6">
                 <Card style={{ width: "100%" }}>
-                  <Card.Img variant="top" src={`${IMAGE_URL}/doctors/${doctor?.image}`} />
+                  <Card.Img
+                    variant="top"
+                    src={`${IMAGE_URL}/doctors/${doctor?.image}`}
+                  />
                   <Card.Body>
                     <div className="btitle">
                       <a>{doctor?.name}</a>

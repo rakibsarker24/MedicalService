@@ -1,29 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../popularAmbulance/popularAmbulance.css";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { BsStarFill } from "react-icons/bs";
 import { BsStarHalf } from "react-icons/bs";
-import { BiRightArrowAlt } from "react-icons/bi";
-import { NavLink } from "react-router-dom";
-import { route, IMAGE_URL } from "../../config";
+import { IMAGE_URL } from "../../config";
 
-const PopularAmbulance = () => {
-  const [ambulances, setAmbulances] = useState([]);
-  useEffect(() => {
-    async function fetchAmbulances() {
-      try {
-        const response = await route?.get("ambulances?page=1");
-        console.log(response, "response");
-        setAmbulances(response?.data?.rows);
-      } catch (error) {
-        console.log(error, "error");
-      }
-    }
-    fetchAmbulances();
-  }, []);
-
-  console.log(ambulances, "ambulances");
-
+const PopularAmbulance = ({ items }) => {
   return (
     <section id="popularAmbulance">
       <Container>
@@ -140,35 +122,40 @@ const PopularAmbulance = () => {
             </Row> */}
 
         <Row>
-          {ambulances &&
-            ambulances?.map((ambulance) => (
-              <Col lg="3" className="mb-4" sm="6">
-                <Card style={{ width: "100%" }}>
-                  <Card.Img
-                    variant="top"
-                    src={`${IMAGE_URL}/ambulances/${ambulance?.image}`}
-                  />
-                  <Card.Body>
-                    <div className="btitle">
-                      <a>{ambulance?.fullName}</a>
-                    </div>
-                    <span>{ambulance?.currentLocation}</span>
-                    <div className="amicon">
-                      <BsStarFill />
-                      <BsStarFill />
-                      <BsStarFill />
-                      <BsStarFill />
-                      <BsStarHalf />
-                    </div>
-                    <p>Call: {ambulance?.contactNumber}</p>
-                    <p>Service Area: {ambulance?.division}</p>
-                    <p>
-                      {/* <NavLink to="/doctorDetails">Read more<BiRightArrowAlt/></NavLink> */}
-                    </p>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
+          {items && items?.length > 0 ? (
+            <>
+              {items?.map((ambulance) => (
+                <Col lg="3" className="mb-4" sm="6">
+                  <Card style={{ width: "100%" }}>
+                    <Card.Img
+                      variant="top"
+                      src={`${IMAGE_URL}/ambulances/${ambulance?.image}`}
+                    />
+                    <Card.Body>
+                      <div className="btitle">
+                        <a>{ambulance?.fullName}</a>
+                      </div>
+                      <span>{ambulance?.currentLocation}</span>
+                      <div className="amicon">
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarHalf />
+                      </div>
+                      <p>Call: {ambulance?.contactNumber}</p>
+                      <p>Service Area: {ambulance?.division}</p>
+                      <p>
+                        {/* <NavLink to="/doctorDetails">Read more<BiRightArrowAlt/></NavLink> */}
+                      </p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </>
+          ) : (
+            <h1>No ambulance found!</h1>
+          )}
         </Row>
       </Container>
     </section>

@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "../donetBlood/donetBlood.css";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { authUser, route } from "../../config";
+import divisions from "../../_data/bd-divisions.json";
+import districts from "../../_data/bd-districts.json";
+import upazilas from "../../_data/bd-upazilas.json";
 
 const initialInputs = {};
 
@@ -46,7 +49,11 @@ const DonetBlood = () => {
               </h2>
             </div>
             <div className="itemform">
-              <Form onSubmit={handelSubmit} method="post" enctype="multipart/form-data">
+              <Form
+                onSubmit={handelSubmit}
+                method="post"
+                enctype="multipart/form-data"
+              >
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="formGridEmail">
                     <Form.Label>Full Name</Form.Label>
@@ -141,60 +148,57 @@ const DonetBlood = () => {
                   <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>Division</Form.Label>
                     <Form.Select
-                      defaultValue="Choose..."
+                      defaultValue=""
                       name="division"
-                      onChange={({ target }) =>
-                        handelChange(target?.name, target?.value)
-                      }
+                      onChange={handelChange}
                     >
                       <option>Choose...</option>
-                      <option value="Barishal">Barishal</option>
-                      <option value="Chattogram">Chattogram</option>
-                      <option value="Dhaka">Dhaka</option>
-                      <option value="Rajshahi">Rajshahi</option>
-                      <option value="Rangpur">Rangpur</option>
-                      <option value="Mymensingh">Mymensingh </option>
-                      <option value="Sylhet">Sylhet</option>
+                      {divisions &&
+                        divisions?.map((division) => (
+                          <option value={division?.id}>{division?.name}</option>
+                        ))}
                     </Form.Select>
                   </Form.Group>
 
                   <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>District</Form.Label>
                     <Form.Select
-                      defaultValue="Choose..."
+                      defaultValue=""
                       name="district"
-                      onChange={({ target }) =>
-                        handelChange(target?.name, target?.value)
-                      }
+                      onChange={handelChange}
                     >
                       <option>Choose...</option>
-                      <option value="Barishal">Barishal</option>
-                      <option value="Chattogram">Chattogram</option>
-                      <option value="Dhaka">Dhaka</option>
-                      <option value="Rajshahi">Rajshahi</option>
-                      <option value="Rangpur">Rangpur</option>
-                      <option value="Mymensingh">Mymensingh </option>
-                      <option value="Sylhet">Sylhet</option>
+                      {districts &&
+                        districts
+                          ?.filter(
+                            (district) =>
+                              district?.division_id === inputs?.division
+                          )
+                          .map((district) => (
+                            <option value={district?.id}>
+                              {district?.name}
+                            </option>
+                          ))}
                     </Form.Select>
                   </Form.Group>
 
                   <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>Upazila</Form.Label>
                     <Form.Select
-                      defaultValue="Choose..."
+                      defaultValue=""
                       name="upazila"
-                      onChange={({ target }) =>
-                        handelChange(target?.name, target?.value)
-                      }
+                      onChange={handelChange}
                     >
                       <option>Choose...</option>
-                      <option value="Barishal">Barishal</option>
-                      <option value="Chattogram">Chattogram</option>
-                      <option value="Dhaka">Dhaka</option>
-                      <option value="Rajshahi">Rajshahi</option>
-                      <option value="Rangpur">Rangpur</option>
-                      <option value="Mymensingh">Mymensingh </option>
-                      <option value="Sylhet">Sylhet</option>
+                      {upazilas &&
+                        upazilas
+                          ?.filter(
+                            (upazila) =>
+                              upazila?.district_id === inputs?.district
+                          )
+                          .map((upazila) => (
+                            <option value={upazila?.id}>{upazila?.name}</option>
+                          ))}
                     </Form.Select>
                   </Form.Group>
                 </Row>
