@@ -31,6 +31,7 @@ import PdonetBlood from "./components/pages/PdonetBlood";
 import Admin from "./components/admin/Admin";
 import PvideoCall from "./components/pages/PvideoCall";
 import PrivateRoutes from "./components/route/PrivateRoutes";
+import Category from "./components/pages/Shop/Category";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/login" element={<Loing />}></Route>
           <Route path="/doctors" element={<Doctors />}></Route>
           <Route path="/shop" element={<Shop />}></Route>
+          <Route path="/category/:slug" element={<Category />}></Route>
           <Route path="/about" element={<ContactUs />}></Route>
           <Route path="/blog" element={<Blog />}></Route>
           <Route path="/blood" element={<Pblood />}></Route>

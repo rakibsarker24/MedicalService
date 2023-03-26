@@ -11,7 +11,7 @@ import { HiOutlineMailOpen } from 'react-icons/hi';
 import { BiTimeFive } from 'react-icons/bi';
 import { BiLocationPlus } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
-import Shop from './../pages/Shop';
+import Shop from '../pages/Shop';
 
 
 const Footer = () => {
