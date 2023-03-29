@@ -9,6 +9,7 @@ import {
   NavDropdown,
   Offcanvas,
   Button,
+  Dropdown
 } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
@@ -107,15 +108,37 @@ const Navber = () => {
                 <div className="numcart">
                   <p>0</p>
                 </div>
+                
+
+
+            <Dropdown>
+              <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
                 {authUser() ? (
                   <h4 className="text-capitalize">
                     {authUser()?.username?.at(0)}
                   </h4>
                 ) : (
-                  <Link to="/login">
+                  <Link>
                     <MdAccountCircle className="nicon" />
                   </Link>
                 )}
+                {/* Dropdown Button */}
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu className="bgbtn">
+                <Dropdown.Item>
+                    <Link to="/">Profile</Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                    <Link to="/login">Login</Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                    <Link to="/">Logout</Link>
+                </Dropdown.Item>
+                
+              </Dropdown.Menu>
+            </Dropdown>
+
               </div>
             </Navbar.Collapse>
           </Container>

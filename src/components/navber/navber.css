@@ -68,8 +68,8 @@
 }
 .navIcons .numcart p {
 	position: absolute;
-	top: -24%;
-	left: 51%;
+	top: -9%;
+	left: 23%;
 	font-family: 'Comfortaa', cursive;
 	font-size: 10px;
 	color: white;
@@ -93,6 +93,11 @@
 .offcanvas.show:not(.hiding), .offcanvas.showing {
 	transform: none;
 	margin-top: 75px;
+}
+
+.btn {
+	background: transparent;
+	border: 0;
 }
 
 
