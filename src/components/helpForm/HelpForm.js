@@ -125,7 +125,9 @@ const HelpForm = () => {
                     <Form.Select
                       defaultValue=""
                       name="division"
-                      onChange={handelChange}
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
                     >
                       <option>Choose...</option>
                       {divisions &&
@@ -140,7 +142,9 @@ const HelpForm = () => {
                     <Form.Select
                       defaultValue=""
                       name="district"
-                      onChange={handelChange}
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
                     >
                       <option>Choose...</option>
                       {districts &&
@@ -162,7 +166,9 @@ const HelpForm = () => {
                     <Form.Select
                       defaultValue=""
                       name="upazila"
-                      onChange={handelChange}
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
                     >
                       <option>Choose...</option>
                       {upazilas &&

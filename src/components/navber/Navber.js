@@ -25,6 +25,17 @@ const Navber = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [index, setIndex] = useState(0);
+
+  const products =
+    sessionStorage.getItem("cart") &&
+    JSON.parse(sessionStorage.getItem("cart"));
+
+  const handelRemove = (productId) => {
+    setIndex(productId)
+    const items = products?.filter(item => item?.product?.id !== productId);
+    sessionStorage.setItem('cart', JSON.stringify(items));
+  };
   return (
     <>
       <section id="navber" className="navtop">
@@ -64,7 +75,7 @@ const Navber = () => {
           <Container className="container px-0">
             <div className="brandlogo">
               <Link to="/" className="logo">
-                <img src="images/logo.png" alt="logo" />
+                <img src="/images/logo.png" alt="logo" />
               </Link>
             </div>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -100,12 +111,12 @@ const Navber = () => {
                     <Offcanvas.Title>All Cards</Offcanvas.Title>
                   </Offcanvas.Header>
                   <Offcanvas.Body>
-                    <PurchaseProduct />
+                    <PurchaseProduct products={products} handelRemove={handelRemove} />
                   </Offcanvas.Body>
                 </Offcanvas>
 
                 <div className="numcart">
-                  <p>0</p>
+                  <p>{sessionStorage.getItem('cart') ? JSON.parse(sessionStorage.getItem('cart'))?.length : 0}</p>
                 </div>
                 {authUser() ? (
                   <h4 className="text-capitalize">
