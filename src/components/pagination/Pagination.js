@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import PopularPro from './../popularPro/PopularPro';
+import '../pagination/pagination.css'
 
 
 const Pagination = ({totalposts,postPerPage,setCurrentPage}) => {
@@ -16,7 +17,7 @@ const Pagination = ({totalposts,postPerPage,setCurrentPage}) => {
     <div>
       {pages.map((item, index) => (
 
-        <Button key={index} onClick={()=>setCurrentPage(item)} > {item} </Button>
+        <Button className='pagi_btn' key={index} onClick={()=>setCurrentPage(item)} > {item} </Button>
       ))
     }
     </div>

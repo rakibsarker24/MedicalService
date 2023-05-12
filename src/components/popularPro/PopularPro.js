@@ -6,6 +6,7 @@ import Pagination from './../pagination/Pagination';
 import ProductCard from '../productCard/ProductCard';
 import CriptoList from './CriptoList';
 import axios from 'axios';
+import { API_URL } from '../../config';
 
 
 
@@ -17,8 +18,8 @@ const PopularPro = () => {
 
     useEffect(()=>{
         async function rakib(){
-            let data = await axios.get("https://fakestoreapi.com/products")
-            setConsData(data.data)
+            let data = await axios.get(`${API_URL}/products?page=1`)
+            setConsData(data?.data?.rows)
             // console.log(data.data)
         }
         rakib()

@@ -19,7 +19,7 @@ const Telehelth = () => {
                         </div>
                     </div> */}
                     <ReactPlayer
-                        url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                        url="https://www.youtube.com/watch?v=IEF9nPrDElk"
                         width="100%" height="100%" controls/>
                 </Col>
                 <Col lg='6' md='6'>

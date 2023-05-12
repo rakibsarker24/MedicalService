@@ -9,7 +9,7 @@ const CriptoList = ({currentPost}) => {
         <Container>
             <Row>
                     {currentPost.map((item)=>(
-                        <ProductCard image={item.image}/>
+                        <ProductCard image={item.image} title={item.title} price={item.price} description={item.description}/>
                     ))}
             </Row>
         </Container>

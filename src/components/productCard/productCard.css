@@ -38,7 +38,36 @@
     position: relative;
     margin-bottom: 30px;
 }
-
+.mybtn{
+    color:white;
+    display: block;
+    color: var(--bs-link-color);
+    text-decoration: underline;
+    background: #0d6efd;
+    width:100%;
+    padding: 9px 10px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    transition: .4s;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+.mybtn:hover{
+    color:#333;
+}
+.norap{
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 @media (min-width:320px) and (max-width:575px){
     #popularPro button {

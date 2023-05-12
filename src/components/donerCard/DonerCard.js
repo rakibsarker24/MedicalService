@@ -30,13 +30,13 @@ const DonerCard = ({ items }) => {
                         Last Donet Date: <span>{item?.lastDonateDate}</span>
                       </h6>
                     </div>
-                    <p>Age: {item?.age}</p>
-                    <p>Gender: {item?.gender}</p>
+                    {/* <p>Age: {item?.age}</p> */}
+                    {/* <p>Gender: {item?.gender}</p> */}
                     <p>
                       Call: <span>{item?.contactNumber}</span>
                     </p>
                     <p>email: {item?.email}</p>
-                    <p>Address: {item?.address}</p>
+                    <p>Address: {item?.address}, {item?.upazila}</p>
                     <p>
                       {/* <NavLink to="/doctorDetails">Read more<BiRightArrowAlt/></NavLink> */}
                     </p>
