@@ -5,8 +5,10 @@ import "../searchDoctor/searchDoctor.css";
 import divisions from "../../_data/bd-divisions.json";
 import districts from "../../_data/bd-districts.json";
 import upazilas from "../../_data/bd-upazilas.json";
+import hospitals from "../../_data/hospitals.json";
 
 const initialState = {
+  hospital: "",
   division: "",
   district: "",
   upazila: "",
@@ -43,6 +45,21 @@ const SearchDoctor = ({ handelSearch }) => {
             <div className="">
               {/* <label htmlFor="">Select your Division</label> */}
               <Row className="mb-3">
+                <Form.Group as={Col} controlId="formGridState">
+                  <Form.Label>Hospital</Form.Label>
+                  <Form.Select
+                    defaultValue=""
+                    name="division"
+                    onChange={handelChange}
+                  >
+                    <option>Choose...</option>
+                    {hospitals &&
+                      hospitals?.map((hospital) => (
+                        <option value={hospital?.id}>{hospital?.name}</option>
+                      ))}
+                  </Form.Select>
+                </Form.Group>
+
                 <Form.Group as={Col} controlId="formGridState">
                   <Form.Label>Department</Form.Label>
                   <Form.Select

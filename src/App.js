@@ -1,6 +1,7 @@
 import React from "react";
 import Registration from "./components/registration/Registration";
 import Loing from "./components/login/Login";
+import DoctorLogin from "./components/login/DoctorLogin";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Appointment from "./components/pages/Appointment";
@@ -32,10 +33,25 @@ import Admin from "./components/admin/Admin";
 import PvideoCall from "./components/pages/PvideoCall";
 import PrivateRoutes from "./components/route/PrivateRoutes";
 import Category from "./components/pages/Shop/Category";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
     <>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -44,7 +60,10 @@ const App = () => {
           <Route path="/doctors" element={<Doctors />}></Route>
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/category/:slug" element={<Category />}></Route>
-          <Route path="/category/:slug/:productSlug" element={<PaddtoCard />}></Route>
+          <Route
+            path="/category/:slug/:productSlug"
+            element={<PaddtoCard />}
+          ></Route>
           <Route path="/about" element={<ContactUs />}></Route>
           <Route path="/blog" element={<Blog />}></Route>
           <Route path="/blood" element={<Pblood />}></Route>
@@ -71,10 +90,10 @@ const App = () => {
           <Route element={<PrivateRoutes />}>
             <Route path="/appointment" element={<Appointment />}></Route>
             <Route path="/donetBlood" element={<PdonetBlood />}></Route>
-
           </Route>
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </>
   );
 };

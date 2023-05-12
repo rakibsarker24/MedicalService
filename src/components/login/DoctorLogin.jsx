@@ -7,7 +7,7 @@ import Navber from '../navber/Navber'
 import Footer from '../footer/Footer'
 import { route } from '../../config'
 
-const Login = () => {
+const DoctorLogin = () => {
     const navigate = useNavigate();
     let [email, setEmail] = useState("")
     let [erremail, setErrEmail] = useState("")
@@ -56,7 +56,6 @@ const Login = () => {
 
     const handelLogin = async () => {
         let formData = new FormData();
-        formData.append('patient', email);
         formData.append('email', email);
         formData.append('password', password);
 
@@ -83,7 +82,7 @@ const Login = () => {
                     <Row className="justify-content-center">
                         <Col lg='4' sm='6' xs='10' md='5' className='body'>
                             <Alert>
-                                <h2 className='text-center'>Login</h2>
+                                <h2 className='text-center'>Doctor Login</h2>
                             </Alert>
                             <Form>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -173,4 +172,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default DoctorLogin
