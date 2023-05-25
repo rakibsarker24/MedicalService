@@ -26,12 +26,12 @@ const DocDetails = (props) => {
                 <Row>
                     <Col lg='3'>
                         <div className="docImg">
-                            <img src={`${IMAGE_URL}/doctors/${doctor?.image}`} alt="Doctor" />
+                            <img src={`${IMAGE_URL}/users/${doctor?.user?.image}`} alt="Doctor" />
                         </div>
                     </Col>
                     <Col lg='4'>
                         <div className="degi">
-                           <h3>{doctor?.fullName}</h3>
+                           <h3>{doctor?.user?.fullName}</h3>
                            <p><span>Qualifications: </span>{doctor?.description}</p>
                            <p><span>Specialty: </span>{doctor?.appointment}</p>
                            <p><span>Designation: </span>{doctor?.designation} </p>

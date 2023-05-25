@@ -13,6 +13,7 @@ import { route } from "../../config";
 import divisions from "../../_data/bd-divisions.json";
 import districts from "../../_data/bd-districts.json";
 import upazilas from "../../_data/bd-upazilas.json";
+import { toast } from "react-toastify";
 
 const initialInputs = {};
 
@@ -37,15 +38,19 @@ const HelpForm = () => {
   }, []);
   const handelSubmit = async (e) => {
     e.preventDefault();
-    console.log(inputs, "inputs");
+    const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {};
+    console.log(user, "inputs");
     if (!Object.keys(inputs)?.length) {
       return;
     }
     try {
-      const response = await route?.post("appointments", inputs);
+      const response = await route?.post("appointments", {...inputs, patientId:user?.id});
       setInputs(initialInputs);
-      console.log(response, "response");
+      console.log(response?.data?.message, "response");
+      toast.success(response?.data?.message)
     } catch (error) {
+      toast.error(error?.data?.message)
+
       console.log(error, "error");
     }
   };
@@ -125,7 +130,9 @@ const HelpForm = () => {
                     <Form.Select
                       defaultValue=""
                       name="division"
-                      onChange={handelChange}
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
                     >
                       <option>Choose...</option>
                       {divisions &&
@@ -140,7 +147,9 @@ const HelpForm = () => {
                     <Form.Select
                       defaultValue=""
                       name="district"
-                      onChange={handelChange}
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
                     >
                       <option>Choose...</option>
                       {districts &&
@@ -162,7 +171,9 @@ const HelpForm = () => {
                     <Form.Select
                       defaultValue=""
                       name="upazila"
-                      onChange={handelChange}
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
                     >
                       <option>Choose...</option>
                       {upazilas &&
@@ -211,7 +222,7 @@ const HelpForm = () => {
                       <option>Choose...</option>
                       {doctors &&
                         doctors?.map((doctor) => (
-                          <option value={doctor?.id}>{doctor?.fullName}</option>
+                          <option value={doctor?.user?.id}>{doctor?.user?.fullName}</option>
                         ))}
                     </Form.Select>
                   </Form.Group>

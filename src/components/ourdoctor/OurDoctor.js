@@ -30,11 +30,11 @@ const OurDoctor = ({ items }) => {
                 <Card style={{ width: "100%" }}>
                   <Card.Img
                     variant="top"
-                    src={`${IMAGE_URL}/doctors/${doctor?.image}`}
+                    src={`${IMAGE_URL}/users/${doctor?.user?.image}`}
                   />
                   <Card.Body>
                     <div className="btitle">
-                      <a>{doctor?.name}</a>
+                      <NavLink to={`/doctorDetails/${doctor?.id}`} className="text-capitalize">{doctor?.user?.fullName}</NavLink>
                     </div>
                     <p>{doctor?.designation}</p>
                     <p>
