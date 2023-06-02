@@ -6,6 +6,7 @@ import NavTop from '../navTop/NavTop'
 import Navber from '../navber/Navber'
 import Footer from '../footer/Footer'
 import { route } from '../../config'
+import { toast } from 'react-toastify'
 
 const Login = () => {
     const navigate = useNavigate();
@@ -64,10 +65,12 @@ const Login = () => {
             const response = await route.post(`/auth/sign-in`, formData);
             localStorage.setItem('token',  JSON.stringify(`Bearer ${response?.data?.token}`));
             localStorage.setItem('user', JSON.stringify(response?.data?.user));
+            toast.success(response?.data?.message)
             navigate('/')
             console.log(response, 'response')
         } catch (error) {
-            console.log(error, 'error')
+            console.log(error.response, 'error')
+            toast.error(error.response?.data?.message)
         }
 
     }

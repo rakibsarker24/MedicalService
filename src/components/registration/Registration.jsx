@@ -7,6 +7,7 @@ import Navber from '../navber/Navber'
 import Footer from '../footer/Footer'
 import axios from 'axios'
 import { API_URL, route } from '../../config'
+import { toast } from 'react-toastify'
 
 const Registration = () => {
     const navigate = useNavigate();
@@ -115,10 +116,12 @@ const Registration = () => {
             const response = await route.post(`/auth/sign-up`, formData);
             localStorage.setItem('token', JSON.stringify(`Bearer ${response?.data?.token}`));
             localStorage.setItem('user', JSON.stringify(response?.data?.user));
+            toast.success(response?.data?.message)
             navigate('/')
             console.log(response, 'response')
         } catch (error) {
             console.log(error, 'error')
+            toast.error(error.response?.data?.message)
         }
 
     }

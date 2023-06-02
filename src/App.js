@@ -30,11 +30,13 @@ import Navber from "./components/navber/Navber";
 // import Admin from './components/Upload/Admin'
 import PdonetBlood from "./components/pages/PdonetBlood";
 import Admin from "./components/admin/Admin";
+import Profile from "./components/profile";
 import PvideoCall from "./components/pages/PvideoCall";
 import PrivateRoutes from "./components/route/PrivateRoutes";
 import Category from "./components/pages/Shop/Category";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Message from "./components/profile/message";
 
 const App = () => {
   return (
@@ -90,6 +92,8 @@ const App = () => {
           <Route element={<PrivateRoutes />}>
             <Route path="/appointment" element={<Appointment />}></Route>
             <Route path="/donetBlood" element={<PdonetBlood />}></Route>
+            <Route path="/profile" element={<Profile />}></Route>
+            <Route path="/profile/message/:doctorId" element={<Message />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
