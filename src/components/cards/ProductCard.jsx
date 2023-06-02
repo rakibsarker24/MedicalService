@@ -49,14 +49,15 @@ const ProductCard = ({ item }) => {
                     src={`${IMAGE_URL}/products/${item.image}`}
                 />
                 <Card.Body>
-                    <Card.Title className="text-center">
+                    <Card.Title className="text-center text-capitalize">
                         {item?.title}
                     </Card.Title>
                     <Card.Text className="text-center">
-                        <label>price</label>
+                        <label>Price: &nbsp;</label>
                         <span>{item?.price}</span>
                     </Card.Text>
                     <NavLink
+                    className='text-center'
                         to="/addcard"
                         onClick={(e) => handelAddToCart(e, item)}
                         variant="primary"

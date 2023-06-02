@@ -51,6 +51,7 @@ const AddCard = ({ product }) => {
     }
   };
 
+
   return (
     <section id="addcard">
       {/* {JSON.stringify(cartItems, "cartItems")} */}
@@ -106,9 +107,9 @@ const AddCard = ({ product }) => {
                 <strong onClick={() => handelDecrement(product?.id)}>-</strong>
 
                 <span>
-                  {cartItems &&
-                    cartItems?.find((item) => item?.product?.id === product?.id)
-                      ?.quantity}
+                  {(cartItems &&
+                    cartItems?.find((item) => parseInt(item?.product?.id) === parseInt(product?.id))
+                      ?.quantity) ?? 1}
                 </span>
                 <strong onClick={() => handelIncrement(product?.id)}>+</strong>
               </div>

@@ -5,6 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaTrashAlt } from "react-icons/fa";
 import { authUser, route } from "../../config";
+import { toast } from "react-toastify";
 
 const PurchaseProduct = ({ products, handelRemove }) => {
   const navigate = useNavigate();
@@ -28,8 +29,11 @@ const PurchaseProduct = ({ products, handelRemove }) => {
     try {
       const response = await route?.post("orders", data);
       console.log(response, "response");
-      alert(response?.data?.message);
+      toast.success(response?.data?.message);
+      sessionStorage.removeItem('cart');
+      navigate("/");
     } catch (error) {
+      toast.error("Please try again");
       console.log(error, "error");
     }
     console.log("confirm order");

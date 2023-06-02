@@ -48,6 +48,9 @@ const Ecommerce_category = () => {
                     </Col>
                 </Row> */}
         <Row>
+        <Col lg='12' xs='12' sm='12' md='12'>
+                    <h3>Categories</h3>
+                </Col>
           {categories &&
             categories?.map((category) => (
               <Col lg="3" xs="6" md="3" sm="3">
