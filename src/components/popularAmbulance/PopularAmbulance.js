@@ -4,6 +4,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { BsStarFill } from "react-icons/bs";
 import { BsStarHalf } from "react-icons/bs";
 import { IMAGE_URL } from "../../config";
+import { getAddress } from "../../utils";
 
 const PopularAmbulance = ({ items }) => {
   return (
@@ -144,7 +145,14 @@ const PopularAmbulance = ({ items }) => {
                         <BsStarHalf />
                       </div>
                       <p>Call: {ambulance?.contactNumber}</p>
-                      <p>Service Area: {ambulance?.division}</p>
+                      <p>
+                        Service Area:{" "}
+                        {getAddress(
+                          ambulance?.division,
+                          ambulance?.district,
+                          ambulance?.upazila
+                        )}
+                      </p>
                       <p>
                         {/* <NavLink to="/doctorDetails">Read more<BiRightArrowAlt/></NavLink> */}
                       </p>

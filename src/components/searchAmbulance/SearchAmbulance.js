@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Container, Row, Col, Button, Form, Card } from "react-bootstrap";
 import "../searchAmbulance/searchAmbulance.css";
 import divisions from "../../_data/bd-divisions.json";
 import districts from "../../_data/bd-districts.json";
 import upazilas from "../../_data/bd-upazilas.json";
+import { getAddress } from "../../utils";
+import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import { IMAGE_URL } from "../../config";
 
 const initialState = {
   division: "",
@@ -11,7 +14,7 @@ const initialState = {
   upazila: "",
 };
 
-const SearchAmbulance = ({handelSearch}) => {
+const SearchAmbulance = ({ handelSearch, items }) => {
   const [inputs, setInputs] = useState(initialState);
   const handelChange = (e) => {
     e.preventDefault();
@@ -98,9 +101,58 @@ const SearchAmbulance = ({handelSearch}) => {
               </Row>
             </div>
             <div className=" text-center mt-4">
-              <Button onClick={() => handelSearch(inputs)} className="btn btn-primary">Search Ambulance</Button>
+              <Button
+                onClick={() => handelSearch(inputs)}
+                className="btn btn-primary"
+              >
+                Search Ambulance
+              </Button>
             </div>
           </Col>
+        </Row>
+
+        <Row>
+          {items && items?.length > 0 ? (
+            <>
+              {items?.map((ambulance) => (
+                <Col lg="3" className="mb-4" sm="6">
+                  <Card style={{ width: "100%" }}>
+                    <Card.Img
+                      variant="top"
+                      src={`${IMAGE_URL}/ambulances/${ambulance?.image}`}
+                    />
+                    <Card.Body>
+                      <div className="btitle">
+                        <a>{ambulance?.fullName}</a>
+                      </div>
+                      <span>{ambulance?.currentLocation}</span>
+                      <div className="amicon">
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarFill />
+                        <BsStarHalf />
+                      </div>
+                      <p>Call: {ambulance?.contactNumber}</p>
+                      <p>
+                        Service Area:{" "}
+                        {getAddress(
+                          ambulance?.division,
+                          ambulance?.district,
+                          ambulance?.upazila
+                        )}
+                      </p>
+                      <p>
+                        {/* <NavLink to="/doctorDetails">Read more<BiRightArrowAlt/></NavLink> */}
+                      </p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </>
+          ) : (
+            <h1>No ambulance found!</h1>
+          )}
         </Row>
       </Container>
     </section>

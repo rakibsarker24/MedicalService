@@ -15,7 +15,7 @@ const Appointments = () => {
     }, [])
     return (
         <div>
-            {authUser()?.id}
+            {/* {authUser()?.id} */}
             <Table>
                 <thead>
                     <tr>

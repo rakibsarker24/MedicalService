@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import "../searchDoctor/searchDoctor.css";
 
 import divisions from "../../_data/bd-divisions.json";
 import districts from "../../_data/bd-districts.json";
 import upazilas from "../../_data/bd-upazilas.json";
 import hospitals from "../../_data/hospitals.json";
+import { IMAGE_URL } from "../../config";
+import { NavLink } from "react-router-dom";
+import { BiRightArrowAlt } from "react-icons/bi";
 
 const initialState = {
   hospital: "",
@@ -14,7 +17,7 @@ const initialState = {
   upazila: "",
   department: "",
 };
-const SearchDoctor = ({ handelSearch }) => {
+const SearchDoctor = ({ handelSearch, items }) => {
   const [inputs, setInputs] = useState(initialState);
   const handelChange = (e) => {
     e.preventDefault();
@@ -146,6 +149,40 @@ const SearchDoctor = ({ handelSearch }) => {
               </Row>
             </div>
           </Col>
+        </Row>
+        <Row>
+          {items &&
+            items?.map((doctor) => (
+              <Col lg="3" className="mb-4" sm="6">
+                <Card style={{ width: "100%" }}>
+                  <Card.Img
+                    variant="top"
+                    src={`${IMAGE_URL}/users/${doctor?.user?.image}`}
+                  />
+                  <Card.Body>
+                    <div className="btitle">
+                      <NavLink
+                        to={`/doctorDetails/${doctor?.id}`}
+                        className="text-capitalize"
+                      >
+                        {doctor?.user?.fullName}
+                      </NavLink>
+                    </div>
+                    <p>{doctor?.designation}</p>
+                    <p>
+                      <NavLink to={`/doctorDetails/${doctor?.id}`}>
+                        Read more
+                        <BiRightArrowAlt />
+                      </NavLink>
+                    </p>
+                    {/* <div className="bicon">
+                         <span><AiOutlineShareAlt/></span>
+                         <span><AiOutlineHeart/></span>
+                     </div> */}
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
         </Row>
       </Container>
     </section>

@@ -19,9 +19,9 @@ import { MdEmail } from "react-icons/md";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { BsFacebook } from "react-icons/bs";
 import PurchaseProduct from "../purchaseProduct/PurchaseProduct";
-import { authUser } from "../../config";
+import { authUser, route } from "../../config";
 
-const Navber = () => {
+const Navber = ({ css = null }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -38,10 +38,19 @@ const Navber = () => {
     sessionStorage.setItem("cart", JSON.stringify(items));
   };
 
-  console.log(authUser(), "auth user");
+  const loggedIn =
+    !!localStorage.getItem("token") && localStorage.getItem("token") !== null;
+
+  const handelLogout = async () => {
+    try {
+      await route.post("sign-out");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   return (
     <>
-      <section id="navber" className="navtop">
+      <section id="navber" className={`navtop ${css}`}>
         <Container className="container">
           <Row>
             <Col lg="3" xs="5">
@@ -103,11 +112,22 @@ const Navber = () => {
                 <NavLink to="/about">Contact</NavLink>
               </Nav>
 
-              <div className="navIcons flex align-center">
+              <div className="navIcons flex align-items-center">
                 {/* //Offcanvas */}
-                <Link variant="primary" onClick={handleShow}>
+                <Link
+                  variant="primary"
+                  onClick={handleShow}
+                  className="position-relative"
+                >
                   {/* cart icon */}
                   <FaShoppingCart className="nicon" />
+                  <div className="numcart">
+                    <p>
+                      {sessionStorage.getItem("cart")
+                        ? JSON.parse(sessionStorage.getItem("cart"))?.length
+                        : 0}
+                    </p>
+                  </div>
                 </Link>
                 <Offcanvas show={show} onHide={handleClose}>
                   <Offcanvas.Header closeButton>
@@ -121,13 +141,6 @@ const Navber = () => {
                   </Offcanvas.Body>
                 </Offcanvas>
 
-                <div className="numcart">
-                  <p>
-                    {sessionStorage.getItem("cart")
-                      ? JSON.parse(sessionStorage.getItem("cart"))?.length
-                      : 0}
-                  </p>
-                </div>
                 {/* {authUser() ? (
                   <h4 className="text-capitalize">
                     {authUser()?.username?.at(0)}
@@ -138,35 +151,44 @@ const Navber = () => {
                   </Link>
                 )} */}
 
-                <Dropdown>
+                {authUser() ? (
+                  <Link to="/profile">
+                    <h4 className="m-0 text-capitalize px-3 py-2 text-white">
+                      {authUser()?.username?.at(0)}
+                    </h4>
+                  </Link>
+                ) : (
+                  <Link to="/login">
+                    {/* <MdAccountCircle className="nicon" /> */}
+                    Login
+                  </Link>
+                )}
+
+                {/* <Dropdown>
                   <Dropdown.Toggle
                     id="dropdown-button-dark-example1"
                     variant="secondary"
                   >
-                    {authUser() ? (
-                      <h4 className="text-capitalize">
-                        {authUser()?.username?.at(0)}
-                      </h4>
-                    ) : (
-                      <Link>
-                        <MdAccountCircle className="nicon" />
-                      </Link>
-                    )}
-                    {/* Dropdown Button */}
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className="bgbtn">
-                    <Dropdown.Item>
-                      <Link to="/">Profile</Link>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <Link to="/login">Login</Link>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <Link to="/">Logout</Link>
-                    </Dropdown.Item>
+                    {loggedIn ? (
+                      <>
+                        <Dropdown.Item>
+                          <Link to="/profile">Profile</Link>
+                        </Dropdown.Item>
+
+                        <Dropdown.Item>
+                          <Button onClick={handelLogout}>Logout</Button>
+                        </Dropdown.Item>
+                      </>
+                    ) : (
+                      <>
+                     
+                      </>
+                    )}
                   </Dropdown.Menu>
-                </Dropdown>
+                </Dropdown> */}
               </div>
             </Navbar.Collapse>
           </Container>

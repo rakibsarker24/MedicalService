@@ -18,7 +18,7 @@ const PopularPro = () => {
 
     useEffect(()=>{
         async function rakib(){
-            let data = await axios.get(`${API_URL}/products?page=1`)
+            let data = await axios.get(`${API_URL}/products/populer/list?page=1`)
             setConsData(data?.data?.rows)
             // console.log(data.data)
         }

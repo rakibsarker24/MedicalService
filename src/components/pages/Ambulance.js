@@ -8,39 +8,47 @@ import { route } from "../../config";
 
 const Ambulance = () => {
   const [ambulances, setAmbulances] = useState([]);
-  const [filters, setFilters] = useState({});
-  const handelSearch = (data) => {
-    setFilters(data);
-  };
-
-  useEffect(() => {
+  const [populerAmbulances, setPopulerAmbulances] = useState([]);
+  const handelSearch = async (data) => {
     let queryParams = new URLSearchParams();
 
-    if (Object.keys(filters)?.length) {
-      Object.keys(filters).forEach((filter) => {
-        if (filters[filter] !== "") {
-          queryParams.append(filter, filters[filter]);
+    if (Object.keys(data)?.length) {
+      Object.keys(data).forEach((filter) => {
+        if (data[filter] !== "") {
+          queryParams.append(filter, data[filter]);
         }
       });
     }
-    async function fetchData() {
+
+    try {
+      const response = await route?.get(`ambulances?page=1&${queryParams}`);
+      console.log(response, "response");
+      setAmbulances(response?.data?.rows);
+    } catch (error) {
+      console.log(error, "error");
+    }
+  };
+
+  useEffect(() => {
+    async function fetchPopulerData() {
       try {
-        const response = await route?.get(`ambulances?page=1&${queryParams}`);
-        console.log(response, "response");
-        setAmbulances(response?.data?.rows);
+        const response = await route?.get(`ambulances/populer/list?page=1`);
+        console.log(response, "responseasd asdf dsf");
+        setPopulerAmbulances(response?.data?.rows);
       } catch (error) {
         console.log(error, "error");
       }
     }
-    fetchData();
-  }, [filters]);
+
+    fetchPopulerData();
+  }, []);
 
   return (
     <>
       {/* <NavTop/> */}
       <Navber />
-      <SearchAmbulance handelSearch={handelSearch} />
-      <PopularAmbulance items={ambulances} />
+      <SearchAmbulance handelSearch={handelSearch} items={ambulances} />
+      <PopularAmbulance items={populerAmbulances} />
       <Footer />
     </>
   );

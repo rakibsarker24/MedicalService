@@ -3,6 +3,7 @@ import '../docDetails/docDetails.css'
 import { Container,Row,Col, } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import { IMAGE_URL, route } from '../../config';
+import { getAddress, getHospital } from '../../utils';
 
 const DocDetails = (props) => {
     const {id} = useParams();
@@ -31,11 +32,11 @@ const DocDetails = (props) => {
                     </Col>
                     <Col lg='4'>
                         <div className="degi">
-                           <h3>{doctor?.user?.fullName}</h3>
+                           <h3 className='text-capitalize'>{doctor?.user?.fullName}</h3>
                            <p><span>Qualifications: </span>{doctor?.description}</p>
                            <p><span>Specialty: </span>{doctor?.appointment}</p>
                            <p><span>Designation: </span>{doctor?.designation} </p>
-                           <p><span>Institute: </span>{doctor?.branchName} </p>
+                           <p><span>Institute: </span>{getHospital(doctor?.hospital)} </p>
                            <p><span>Department Name: </span>{doctor?.department} </p>
                         </div>
                     </Col>
@@ -47,7 +48,7 @@ const DocDetails = (props) => {
                             <p><span>Off Day: </span>{doctor?.offDay}</p>
                             <p><span>Floor Number: </span>{doctor?.floorNumber}</p>
                             <p><span>Room Number:</span> {doctor?.roomNumber} </p>
-                            <p><span>Branch Name & Address:</span> {doctor?.branchName}</p>
+                            <p><span>Branch Name & Address:</span> {doctor?.branchName} & {getAddress(doctor?.division, doctor?.district, doctor?.upazila)}</p>
                             </div>
                         </div>
                     </Col>

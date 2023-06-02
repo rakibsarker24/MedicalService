@@ -6,6 +6,8 @@ import { BsStarHalf } from "react-icons/bs";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import { IMAGE_URL } from "../../config";
+import moment from "moment";
+import { getAddress } from "../../utils";
 
 const DonerCard = ({ items }) => {
   return (
@@ -27,7 +29,7 @@ const DonerCard = ({ items }) => {
                         Blood Group: <span>"{item?.bloodGroup}"</span>
                       </h6>
                       <h6>
-                        Last Donet Date: <span>{item?.lastDonateDate}</span>
+                        Last Donet Date: <span>{moment(item?.lastDonateDate).format('d MMM, Y')}</span>
                       </h6>
                     </div>
                     <p>Age: {item?.age}</p>
@@ -36,7 +38,7 @@ const DonerCard = ({ items }) => {
                       Call: <span>{item?.contactNumber}</span>
                     </p>
                     <p>email: {item?.email}</p>
-                    <p>Address: {item?.address}</p>
+                    <p>Address: {getAddress(item?.division, item?.district, item?.upazila)}</p>
                     <p>
                       {/* <NavLink to="/doctorDetails">Read more<BiRightArrowAlt/></NavLink> */}
                     </p>

@@ -10,7 +10,7 @@ const Doctors = () => {
     <>
         <Navber/>
         <SearchDoner/>
-        <OurDoctor/>
+        {/* <OurDoctor/> */}
         <Footer/>
     </>
   )

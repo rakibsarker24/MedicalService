@@ -8,13 +8,8 @@ import { route } from "../../config";
 
 const Doctors = () => {
   const [doctors, setDoctors] = useState([]);
-  const [filters, setFilters] = useState({});
-  const handelSearch = (data) => {
-    setFilters(data);
-    // console.log(data, "search");
-  };
-
-  useEffect(() => {
+  const [populerDoctors, setPopulerDoctors] = useState([]);
+  const handelSearch = async (filters) => {
     let queryParams = new URLSearchParams();
 
     if (Object.keys(filters)?.length) {
@@ -24,24 +19,33 @@ const Doctors = () => {
         }
       });
     }
+    try {
+      const response = await route?.get(`doctors?page=1&${queryParams}`);
+      console.log(response, "response");
+      setDoctors(response?.data?.rows);
+    } catch (error) {
+      console.log(error, "error");
+    }
+  };
+
+  useEffect(() => {
     async function fetchData() {
       try {
-        const response = await route?.get(`doctors?page=1&${queryParams}`);
-        console.log(response, "response");
-        setDoctors(response?.data?.rows);
+        const response = await route?.get(`doctors/populer/list?page=1`);
+        setPopulerDoctors(response?.data?.rows);
       } catch (error) {
         console.log(error, "error");
       }
     }
     fetchData();
-  }, [filters]);
+  }, []);
 
   return (
     <>
       {/* <NavTop/> */}
       <Navber />
-      <SearchDoctor handelSearch={handelSearch} />
-      <OurDoctor items={doctors} />
+      <SearchDoctor handelSearch={handelSearch} items={doctors} />
+      <OurDoctor items={populerDoctors} />
       <Footer />
     </>
   );
