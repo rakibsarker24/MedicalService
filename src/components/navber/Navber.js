@@ -41,13 +41,7 @@ const Navber = ({ css = null }) => {
   const loggedIn =
     !!localStorage.getItem("token") && localStorage.getItem("token") !== null;
 
-  const handelLogout = async () => {
-    try {
-      await route.post("sign-out");
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+
   return (
     <>
       <section id="navber" className={`navtop ${css}`}>

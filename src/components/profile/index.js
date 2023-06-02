@@ -22,12 +22,26 @@ import AddBloodSlider from "../Upload/addBloodSlider/AddBloodSlider";
 import AddHomeSlider from "../Upload/addHomeSlider/AddHomeSlider";
 import AddBloodArtical from "../Upload/addBloodArtical/AddBloodArtical";
 import Appointment from "../Upload/appointment/Appointment";
-import { authUser } from "../../config";
+import { authUser, route } from "../../config";
 import Message from "./message";
 import Appointments from "./appointments";
 import Navber from "../navber/Navber";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Profile = () => {
+  const navigate = useNavigate();
+  const handelLogout = async () => {
+    try {
+      const response = await route.post("auth/sign-out");
+      localStorage.removeItem('token')
+      localStorage.removeItem('user')
+      navigate('/')
+      toast.success(response?.data?.message)
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   return (
     <>
       <Navber css="position-relative" />
@@ -43,6 +57,9 @@ const Profile = () => {
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link eventKey="second">Appointments</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link onClick={handelLogout}>Logout</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Col>
