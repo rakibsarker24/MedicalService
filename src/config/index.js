@@ -2,11 +2,11 @@ import axios from "axios";
 
 export const BASE_URL = process.env.PUBLIC_URL;
 
-export const API_URL = "http://127.0.0.1:8000/api/v1";
-export const IMAGE_URL = "http://127.0.0.1:8000/uploads";
+// export const API_URL = "http://127.0.0.1:8000/api/v1";
+// export const IMAGE_URL = "http://127.0.0.1:8000/uploads";
 
-// export const API_URL = "https://backend.bddrakib.com/api/v1";
-// export const IMAGE_URL = "https://backend.bddrakib.com/uploads";
+export const API_URL = "https://backend.bddrakib.com/api/v1";
+export const IMAGE_URL = "https://backend.bddrakib.com/uploads";
 
 export const route = axios.create({
   baseURL: API_URL,

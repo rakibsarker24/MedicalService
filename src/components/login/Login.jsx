@@ -5,23 +5,34 @@ import { Link, useNavigate } from 'react-router-dom'
 import NavTop from '../navTop/NavTop'
 import Navber from '../navber/Navber'
 import Footer from '../footer/Footer'
-import { route } from '../../config'
+import { authUser, route } from '../../config'
 import { toast } from 'react-toastify'
 
 const Login = () => {
     const navigate = useNavigate();
+    const [user, setUser] = useState({});
+    const [reset, setReset] = useState({
+        email: '',
+        dob: ''
+    });
+
+    const [pass, setPass] = useState({
+        pass: '',
+        cpass: ''
+    });
+
     let [email, setEmail] = useState("")
     let [erremail, setErrEmail] = useState("")
 
     let [password, setPassword] = useState("")
     let [errpassword, setErrPassword] = useState("")
-    let [reset, setReset] = useState("")
+    // let [reset, setReset] = useState("")
     const [sshow, setSshow] = useState(false);
 
     const [show, setShow] = useState(false);
     const handleClose = () => {
-        setSshow(true)
-        setShow(false)
+        // setSshow(true)
+        // setShow(false)
     };
     const handleShow = () => setShow(true);
 
@@ -63,7 +74,7 @@ const Login = () => {
 
         try {
             const response = await route.post(`/auth/sign-in`, formData);
-            localStorage.setItem('token',  JSON.stringify(`Bearer ${response?.data?.token}`));
+            localStorage.setItem('token', JSON.stringify(`Bearer ${response?.data?.token}`));
             localStorage.setItem('user', JSON.stringify(response?.data?.user));
             toast.success(response?.data?.message)
             navigate('/')
@@ -75,7 +86,33 @@ const Login = () => {
 
     }
 
+    const handelReset = async () => {
+        try {
+            const response = await route?.post('/auth/verify', { email: reset?.email, dob: reset?.dob })
+            console.log(response, 'reset')
+            setUser(response?.data?.user)
+            toast.success(response?.data?.message)
+            setSshow(true)
+        } catch (error) {
+            toast.error(error?.data?.message)
+        }
+    }
 
+    const resetPassword = async () => {
+        try {
+            let formData = new FormData();
+            formData.append('password', pass?.pass);
+            formData.append('userId', user?.id);
+            const response = await route?.post('/auth/reset-password', formData)
+            toast.success(response?.data?.message)
+            setSshow(false)
+            setShow(false)
+        } catch (error) {
+            console.log('error')
+            console.log(error, 'error')
+            toast.error(error?.data?.message)
+        }
+    }
 
     return (
         <>
@@ -130,12 +167,16 @@ const Login = () => {
                                 <Modal.Body>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label>Email address</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter email" />
+                                        <Form.Control type="email" name="email" placeholder="Enter email" onChange={e => setReset(prevState => ({ ...prevState, [e.target?.name]: e.target?.value }))} />
+                                    </Form.Group>
 
+                                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                        <Form.Label>Date of Birth</Form.Label>
+                                        <Form.Control type="date" name="dob" onChange={e => setReset(prevState => ({ ...prevState, [e.target?.name]: e.target?.value }))} />
                                     </Form.Group>
                                 </Modal.Body>
                                 <Modal.Footer>
-                                    <Button variant="primary" onClick={handleClose} >
+                                    <Button variant="primary" onClick={handelReset} >
                                         Sent Email
                                     </Button>
                                 </Modal.Footer>
@@ -148,22 +189,22 @@ const Login = () => {
                                 <Modal.Title>Set New Password</Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
-                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                {/* <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Code</Form.Label>
                                     <Form.Control type="text" placeholder="enter code" />
-                                </Form.Group>
+                                </Form.Group> */}
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>New Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Enter new password" />
+                                    <Form.Control type="password" name="pass" placeholder="Enter new password" onChange={e => setPass(prevState => ({ ...prevState, [e.target?.name]: e.target?.value }))} />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Confrim New Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Enter confrim new password" />
+                                    <Form.Control type="password" name="cpass" onChange={e => setPass(prevState => ({ ...prevState, [e.target?.name]: e.target?.value }))} placeholder="Enter confirm new password" />
                                 </Form.Group>
                             </Modal.Body>
                             <Modal.Footer>
 
-                                <Button variant="primary" onClick={handleCllose}>
+                                <Button variant="primary" onClick={resetPassword}>
                                     Save Changes
                                 </Button>
                             </Modal.Footer>

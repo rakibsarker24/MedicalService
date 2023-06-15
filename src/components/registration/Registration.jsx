@@ -31,8 +31,8 @@ const Registration = () => {
     let [contactNumber, setContactNumber] = useState("")
     let [errcontactnumber, setErrContactNumber] = useState("")    
     
-    let [sQuestion, setSQuestion] = useState("")
-    let [errsq, setErrSQ] = useState("")
+    let [dob, setDob] = useState("")
+    let [errdob, setErrdob] = useState("")
 
 
 
@@ -78,8 +78,8 @@ const Registration = () => {
             valid = false;
         }
         
-        if (!sQuestion) {
-            setErrSQ("Contact number is required")
+        if (!dob) {
+            setErrdob("Date of birth is required")
             valid = false;
         }
 
@@ -125,6 +125,8 @@ const Registration = () => {
         let formData = new FormData();
         formData.append('username', name);
         formData.append('email', email);
+        formData.append('dob', dob);
+        formData.append('contactNumber', contactNumber);
         formData.append('address', address);
         formData.append('password', password);
 
@@ -181,7 +183,7 @@ const Registration = () => {
 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Contact Number</Form.Label>
-                                    <Form.Control type="email" placeholder="enter address" value={contactNumber} onChange={(e) => { setContactNumber(e.target.value) }} />
+                                    <Form.Control type="email" placeholder="enter contact number" value={contactNumber} onChange={(e) => { setContactNumber(e.target.value) }} />
                                     {errcontactnumber ?
                                         <Form.Text className="text-muted red">
                                             {errcontactnumber}
@@ -201,14 +203,15 @@ const Registration = () => {
                                         :
                                         ""
                                     }
+                                    
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Label>Security Questions</Form.Label>
-                                    <Form.Control type="email" placeholder="enter address" value={sQuestion} onChange={(e) => { setSQuestion(e.target.value) }} />
-                                    {errsq ?
+                                    <Form.Label>Date of Birth <small>(It's remember for reset password)</small></Form.Label>
+                                    <Form.Control type="date" placeholder="enter date of birth" value={dob} onChange={(e) => { setDob(e.target.value) }} />
+                                    {errdob ?
                                         <Form.Text className="text-muted red">
-                                            {errsq}
+                                            {errdob}
                                         </Form.Text>
                                         :
                                         ""
