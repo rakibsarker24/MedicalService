@@ -28,6 +28,12 @@ const Registration = () => {
     let [address, setAddress] = useState("")
     let [erraddress, setErrAddress] = useState("")
 
+    let [contactNumber, setContactNumber] = useState("")
+    let [errcontactnumber, setErrContactNumber] = useState("")    
+    
+    let [sQuestion, setSQuestion] = useState("")
+    let [errsq, setErrSQ] = useState("")
+
 
 
     let handleSubmit = (e) => {
@@ -65,6 +71,16 @@ const Registration = () => {
                 setErrEmail("valid email is required")
                 valid = false;
             }
+        }
+
+        if (!contactNumber) {
+            setErrContactNumber("Contact number is required")
+            valid = false;
+        }
+        
+        if (!sQuestion) {
+            setErrSQ("Contact number is required")
+            valid = false;
         }
 
 
@@ -164,6 +180,18 @@ const Registration = () => {
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Label>Contact Number</Form.Label>
+                                    <Form.Control type="email" placeholder="enter address" value={contactNumber} onChange={(e) => { setContactNumber(e.target.value) }} />
+                                    {errcontactnumber ?
+                                        <Form.Text className="text-muted red">
+                                            {errcontactnumber}
+                                        </Form.Text>
+                                        :
+                                        ""
+                                    }
+                                </Form.Group>
+
+                                <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Your Address</Form.Label>
                                     <Form.Control type="email" placeholder="enter address" value={address} onChange={(e) => { setAddress(e.target.value) }} />
                                     {erraddress ?
@@ -174,6 +202,20 @@ const Registration = () => {
                                         ""
                                     }
                                 </Form.Group>
+
+                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Label>Security Questions</Form.Label>
+                                    <Form.Control type="email" placeholder="enter address" value={sQuestion} onChange={(e) => { setSQuestion(e.target.value) }} />
+                                    {errsq ?
+                                        <Form.Text className="text-muted red">
+                                            {errsq}
+                                        </Form.Text>
+                                        :
+                                        ""
+                                    }
+                                </Form.Group>
+
+
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Create Password</Form.Label>

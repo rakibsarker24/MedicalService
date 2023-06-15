@@ -34,7 +34,7 @@ const DocDetails = (props) => {
                         <div className="degi">
                            <h3 className='text-capitalize'>{doctor?.user?.fullName}</h3>
                            <p><span>Qualifications: </span>{doctor?.description}</p>
-                           <p><span>Specialty: </span>{doctor?.appointment}</p>
+                           {/* <p><span>Specialty: </span>{doctor?.appointment}</p> */}
                            <p><span>Designation: </span>{doctor?.designation} </p>
                            <p><span>Institute: </span>{getHospital(doctor?.hospital)} </p>
                            <p><span>Department Name: </span>{doctor?.department} </p>

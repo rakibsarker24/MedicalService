@@ -5,6 +5,7 @@ import { authUser, route } from "../../config";
 import divisions from "../../_data/bd-divisions.json";
 import districts from "../../_data/bd-districts.json";
 import upazilas from "../../_data/bd-upazilas.json";
+import { toast } from "react-toastify";
 
 const initialInputs = {};
 
@@ -16,18 +17,30 @@ const DonetBlood = () => {
 
   const handelSubmit = async (e) => {
     e.preventDefault();
-    console.log(inputs, "inputs");
+
     if (!Object.keys(inputs)?.length) {
       return;
     }
+
+    let formData = new FormData();
+    formData.append("userId", authUser()?.id);
+
+    // Display the key/value pairs
+    for (let key in inputs) {
+      // console.log(inputs[key]);
+      formData.append(key, inputs[key]);
+    }
+
     try {
-      const response = await route?.post("blooddonors", {
-        ...inputs,
-        userId: authUser()?.id,
+      const response = await route?.post("blooddonors", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
       setInputs(initialInputs);
-      console.log(response, "response");
+      toast.success(response?.data?.message)
     } catch (error) {
+      toast.error(error?.data?.message)
       console.log(error, "error");
     }
   };
@@ -150,7 +163,9 @@ const DonetBlood = () => {
                     <Form.Select
                       defaultValue=""
                       name="division"
-                      onChange={handelChange}
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
                     >
                       <option>Choose...</option>
                       {divisions &&
@@ -165,7 +180,9 @@ const DonetBlood = () => {
                     <Form.Select
                       defaultValue=""
                       name="district"
-                      onChange={handelChange}
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
                     >
                       <option>Choose...</option>
                       {districts &&
@@ -187,7 +204,9 @@ const DonetBlood = () => {
                     <Form.Select
                       defaultValue=""
                       name="upazila"
-                      onChange={handelChange}
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.value)
+                      }
                     >
                       <option>Choose...</option>
                       {upazilas &&
@@ -214,7 +233,7 @@ const DonetBlood = () => {
                         label="Male"
                         name="gender"
                         onChange={({ target }) =>
-                          handelChange(target?.name, target?.value)
+                          handelChange(target?.name, "male")
                         }
                         id="formHorizontalRadios1"
                       />
@@ -223,7 +242,7 @@ const DonetBlood = () => {
                         label="Female"
                         name="gender"
                         onChange={({ target }) =>
-                          handelChange(target?.name, target?.value)
+                          handelChange(target?.name, "female")
                         }
                         id="formHorizontalRadios2"
                       />
@@ -232,13 +251,26 @@ const DonetBlood = () => {
                         label="Others"
                         name="gender"
                         onChange={({ target }) =>
-                          handelChange(target?.name, target?.value)
+                          handelChange(target?.name, "others")
                         }
                         id="formHorizontalRadios3"
                       />
                     </Col>
                   </Form.Group>
                 </fieldset>
+
+                <Row className="mb-3">
+                  <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Label>Image</Form.Label>
+                    <Form.Control
+                      type="file"
+                      name="image"
+                      onChange={({ target }) =>
+                        handelChange(target?.name, target?.files[0])
+                      }
+                    />
+                  </Form.Group>
+                </Row>
 
                 <Button variant="primary" type="submit">
                   Submit
