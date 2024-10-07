@@ -63,7 +63,7 @@ const Category = () => {
                     </Col>
                     
                     <Col lg='3' sm='6' md='4'>
-                        <NavLink to='/component'>
+                        <NavLink to='/category/medical-equipment-6'>
                             <div className="card-content">
                                     <span><MdAddShoppingCart/></span>
                                     <h3>Madical Equpments</h3>

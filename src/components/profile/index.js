@@ -28,16 +28,17 @@ import Appointments from "./appointments";
 import Navber from "../navber/Navber";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import OrderHistories from "../pages/OrderHistories";
 
 const Profile = () => {
   const navigate = useNavigate();
   const handelLogout = async () => {
     try {
       const response = await route.post("auth/sign-out");
-      localStorage.removeItem('token')
-      localStorage.removeItem('user')
-      navigate('/')
-      toast.success(response?.data?.message)
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      navigate("/");
+      toast.success(response?.data?.message);
     } catch (error) {
       console.log(error.message);
     }
@@ -57,6 +58,9 @@ const Profile = () => {
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link eventKey="second">Appointments</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="third">Order Histories</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link onClick={handelLogout}>Logout</Nav.Link>
@@ -90,7 +94,8 @@ const Profile = () => {
                   </Tab.Pane>
 
                   <Tab.Pane eventKey="third">
-                    <AddDoctor />
+                    <OrderHistories />
+                    {/* <AddDoctor /> */}
                   </Tab.Pane>
 
                   <Tab.Pane eventKey="four">

@@ -22,9 +22,17 @@ import PurchaseProduct from "../purchaseProduct/PurchaseProduct";
 import { authUser, route } from "../../config";
 
 const Navber = ({ css = null }) => {
+  const navigate = useNavigate();
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => {
+    if (!authUser()) {
+      navigate("/login", { replace: true });
+    }
+    navigate("/purchaseProduct");
+    // setShow(true)
+  };
 
   const [index, setIndex] = useState(0);
 
@@ -40,7 +48,6 @@ const Navber = ({ css = null }) => {
 
   const loggedIn =
     !!localStorage.getItem("token") && localStorage.getItem("token") !== null;
-
 
   return (
     <>
@@ -109,8 +116,9 @@ const Navber = ({ css = null }) => {
               <div className="navIcons flex align-items-center">
                 {/* //Offcanvas */}
                 <Link
+                  to="/purchaseProduct"
                   variant="primary"
-                  onClick={handleShow}
+                  // onClick={handleShow}
                   className="position-relative"
                 >
                   {/* cart icon */}

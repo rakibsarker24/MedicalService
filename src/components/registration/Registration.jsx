@@ -29,8 +29,8 @@ const Registration = () => {
     let [erraddress, setErrAddress] = useState("")
 
     let [contactNumber, setContactNumber] = useState("")
-    let [errcontactnumber, setErrContactNumber] = useState("")    
-    
+    let [errcontactnumber, setErrContactNumber] = useState("")
+
     let [dob, setDob] = useState("")
     let [errdob, setErrdob] = useState("")
 
@@ -77,7 +77,7 @@ const Registration = () => {
             setErrContactNumber("Contact number is required")
             valid = false;
         }
-        
+
         if (!dob) {
             setErrdob("Date of birth is required")
             valid = false;
@@ -144,7 +144,19 @@ const Registration = () => {
 
     }
 
+    const testMail = async () => {
+        // const phpResponse = await axios.post('http://email.bddrakib.com/sendmail.php', {
+        //     'recipient': 'foysal.km68@gmail.com',
+        //     'subject': 'test email',
+        //     'message': 'email message',
+        // }, {
+        //     headers: { 'Content-Type': 'application/json' }
+        // })
 
+        const phpResponse = await axios.get('http://email.bddrakib.com/sendmail.php?recipient=foysal.km68@gmail.com&subject=testemail&message=message')
+
+        console.log(phpResponse, 'phpResponse')
+    }
 
     return (
         <>
@@ -152,6 +164,9 @@ const Registration = () => {
             <Navber />
             <section id='registration'>
                 <Container>
+
+                    <button className='text-center' onClick={testMail}>Test Email</button>
+
                     <Row className="justify-content-center">
                         <Col lg='4' sm='6' xs='10' md='5' className="body">
                             <Alert>
@@ -203,7 +218,7 @@ const Registration = () => {
                                         :
                                         ""
                                     }
-                                    
+
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
